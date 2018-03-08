@@ -47,7 +47,8 @@ public:
 };  
 ```
 
-Create 10 CSWoman objects on the heap, each representing a woman pioneer in the field of Computer Science. Provide the information described in the CSWoman ctor described above.  
+Create 10 CSWoman objects on the heap, each representing a woman pioneer in the field of Computer Science. 
+Provide the information described in the CSWoman ctor described above.  
 
 Place each into a singly-linked list data structure.  
 
