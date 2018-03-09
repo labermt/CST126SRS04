@@ -1,6 +1,6 @@
 #pragma once
 #include "stdafx.h"
-#include "CSWomen.h"
+#include "CSWoman.h"
 #include <string>
 
 class CSWoman
