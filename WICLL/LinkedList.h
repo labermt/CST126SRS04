@@ -9,13 +9,17 @@ class LinkedList
 private:
 	class Node
 	{
-	public:
+		friend LinkedList;
+
 		Node* next_;
-		CSWoman data_;
+		CSWoman* data_;
+
+	public:
+		Node(Node * next, CSWoman * data);
 	};
+
 	Node* head = nullptr;
 
 public:
 	static void reverse(Node* head);
-	
 };

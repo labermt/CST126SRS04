@@ -2,6 +2,12 @@
 
 #include "LinkedList.h"
 
+LinkedList::Node::Node(Node* next, CSWoman* data):
+	next_{next}, 
+	data_{data}
+{
+}
+
 void LinkedList::reverse(Node* head)
 {
 	Node* prev{ nullptr };
@@ -15,3 +21,5 @@ void LinkedList::reverse(Node* head)
 	}
 	head = prev;
 }
+
+
