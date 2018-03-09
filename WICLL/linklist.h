@@ -1,10 +1,16 @@
 #pragma once
 #include "CSWoman.h"
 
-class Node
+class linklist
 {
 private:
-	Node * next_{nullptr};
-	CSWoman data_;
+	class Node
+	{
+	private:
+		Node * next_{ nullptr };
+		CSWoman data_;
+	};
+	Node * head{ nullptr };
+public:
+	void reverse( Node* head );
 };
-
