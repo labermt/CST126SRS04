@@ -2,7 +2,7 @@
 Women In Computing Linked List  
 
 
-Class ID: 
+Class ID: Tangela
 
 SRS ID: CST126SRS04  
 
