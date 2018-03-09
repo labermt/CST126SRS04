@@ -1,4 +1,5 @@
-﻿#include "stdafx.h"
+#pragma once
+#include "stdafx.h"
 #include <string>
 
 class CSWoman
@@ -10,11 +11,7 @@ private:
 
 public:
 	CSWoman(const char* const name, const unsigned birthYear, const char* const fact);
+
 	// ... and other methods  
 };
 
-int main()
-{
-
-	return 0;
-}

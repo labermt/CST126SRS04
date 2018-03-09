@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A4BB2FC4-1253-4392-AF8E-5A6FA2F1E3D6}</ProjectGuid>
+    <ProjectGuid>{4C277D84-FBDA-44F5-BCCD-BDA9698F2668}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>WICLL</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
@@ -157,7 +157,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="WICLL.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
