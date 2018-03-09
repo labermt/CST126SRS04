@@ -14,7 +14,7 @@ Notes:
 
 Purpose:  
 
-- Learn about the role women in Comlputer Science.  
+- Learn about the role women in Computer Science.  
 - Learn about the singly linked list data structure.  
 - Learn how to add to, delete, and reverse a singly linked list.  
 
@@ -47,15 +47,15 @@ public:
 };  
 ```
 
-Create at least 10 CSWoman objects on the heap, each representing a woman pioneer in the field of Computer Science. Provide the information described in the CSWoman ctor described above.  
+Create 10 CSWoman objects on the heap, each representing a woman pioneer in the field of Computer Science. Provide the information described in the CSWoman ctor described above.  
 
 Place each into a singly-linked list data structure.  
 
-Print the list in forward order.  
+Print the list in any order.  
 
 Reverse the list using the provided algorithm.  
 
-Print the list which is now in the reverse order.  
+Print the list now in the reverse order.  
 
 Tips:  
 
