@@ -4,15 +4,21 @@
 class LinkList
 {
 private:
-	class Node
+	class Node 
 	{
-	public:
+		friend LinkList;
+
+	private:
 		Node* next_;
-		CSWoman data_;
+		CSWoman* data_;
+
+	public:
+		Node(Node* next, CSWoman* data);
 	};
 
-	Node * head{ nullptr };
+	Node * head_{ nullptr };
 
 public:
-  void reverse(Node* head);
+	// set note to pass in pointer ref
+	static void reverse(Node* head);
 };

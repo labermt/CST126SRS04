@@ -14,3 +14,9 @@ void LinkList::reverse(Node* head)
 	}
 	head = prev;
 }
+
+LinkList::Node::Node(Node * next, CSWoman * data):
+	next_{next}, data_{data}
+{
+
+}

@@ -11,7 +11,5 @@ private:
 
 public:
 	CSWoman(const char* const name, const unsigned birthYear, const char* const fact);
-
-	// ... and other methods  
 };
 
