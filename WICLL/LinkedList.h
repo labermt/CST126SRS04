@@ -18,7 +18,7 @@ private:
 		Node(Node * next, CSWoman * data);
 	};
 
-	Node* head = nullptr;
+	Node* head_ = nullptr;
 
 public:
 	static void reverse(Node* head);
