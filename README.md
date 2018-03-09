@@ -14,7 +14,7 @@ Notes:
 
 Purpose:  
 
-- Learn about the role women in Computer Science.  
+- Learn about the role women in Comlputer Science.  
 - Learn about the singly linked list data structure.  
 - Learn how to add to, delete, and reverse a singly linked list.  
 
