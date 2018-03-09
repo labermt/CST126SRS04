@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WICLL", "CST126SRS04\CST126SRS04.vcxproj", "{CB0B6ED4-F5CD-4883-A1ED-33EE7365AD5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C8906DAD-D99C-4250-94CC-23E02AD48596}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB0B6ED4-F5CD-4883-A1ED-33EE7365AD5D}.Debug|x64.ActiveCfg = Debug|x64
+		{CB0B6ED4-F5CD-4883-A1ED-33EE7365AD5D}.Debug|x64.Build.0 = Debug|x64
+		{CB0B6ED4-F5CD-4883-A1ED-33EE7365AD5D}.Debug|x86.ActiveCfg = Debug|Win32
+		{CB0B6ED4-F5CD-4883-A1ED-33EE7365AD5D}.Debug|x86.Build.0 = Debug|Win32
+		{CB0B6ED4-F5CD-4883-A1ED-33EE7365AD5D}.Release|x64.ActiveCfg = Release|x64
+		{CB0B6ED4-F5CD-4883-A1ED-33EE7365AD5D}.Release|x64.Build.0 = Release|x64
+		{CB0B6ED4-F5CD-4883-A1ED-33EE7365AD5D}.Release|x86.ActiveCfg = Release|Win32
+		{CB0B6ED4-F5CD-4883-A1ED-33EE7365AD5D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {527B10B4-D6F7-4514-8648-2EF51FFCEBB4}
+	EndGlobalSection
+EndGlobal
