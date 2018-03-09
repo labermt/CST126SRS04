@@ -1,6 +1,6 @@
 #pragma once
-class CSWoman
+class linklist
 {
-	
+
 };
 
