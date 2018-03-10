@@ -16,8 +16,8 @@ private:
 		node(node * next, CSWoman const * const data);
 	};
 	node* head_{ nullptr };
-	node* reverse(node * const head) const;
 
 public:
 	void add(CSWoman const * const cswoman);
+	void reverse();
 };

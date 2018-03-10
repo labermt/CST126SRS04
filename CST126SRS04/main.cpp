@@ -23,18 +23,24 @@ int main()
 	CSWoman * woman8{ new CSWoman("Anita Borg", 1949, "She founded the Institute for Women and Technology and the Grace Hopper Celebration of Women in Computing\n") };
 	CSWoman * woman9{ new CSWoman("Lucy Sanders", 1954, "co-founded the National Center for Women & Information Technology\n") };
 	 
-	linkedlist ll; 
-	ll.add(woman0);
-	ll.add(woman1);
-	ll.add(woman2);
-	ll.add(woman3);
-	ll.add(woman4);
-	ll.add(woman5);
-	ll.add(woman6);
-	ll.add(woman7);
-	ll.add(woman8);
-	ll.add(woman9);
+	{
+		new char; //intentional garbage that willbe removed 
+		linkedlist ll;
+		ll.add(woman0);
+		ll.add(woman1);
+		ll.add(woman2);
+		ll.add(woman3);
+		ll.add(woman4);
+		ll.add(woman5);
+		ll.add(woman6);
+		ll.add(woman7);
+		ll.add(woman8);
+		ll.add(woman9);
 
+		std::cout << ll <<std::endl;
+		ll.reverse();
+		std::cout << ll <<std::endl;
+	}
 	_CrtDumpMemoryLeaks();
     return 0;
 };

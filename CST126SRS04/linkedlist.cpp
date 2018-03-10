@@ -1,19 +1,20 @@
 #include "linkedlist.h"
+#include "stdafx.h"
 
-linkedlist::node* linkedlist::reverse(node * const head) const 
+void linkedlist::reverse()
 {
 	node * prev{ nullptr };
-	node * curr{ head };
+	node * curr{ head_ };
 
 	while (curr != nullptr)
 	{
 		const auto next = curr->next_;
 		curr->next_ = prev;
-		prev = curr; 
+		prev = curr;
 		curr = next; 
 	}
 
-	return prev; 
+	head_ = prev; 
 }
 
 void linkedlist::add(CSWoman const * const cswoman) 
