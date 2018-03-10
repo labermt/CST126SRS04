@@ -16,7 +16,13 @@ linkedlist::node* linkedlist::reverse(node * const head) const
 	return prev; 
 }
 
-void linkedlist::add(const CSWoman * const cswoman) const
+void linkedlist::add(CSWoman const * const cswoman) 
 {
-	
+	auto const var{ new node(head_, cswoman) }; 
+	head_ = var; 
+}
+
+linkedlist::node::node(node * const next, CSWoman const * const data) :
+	next_{ next }, data_{ data }
+{
 }

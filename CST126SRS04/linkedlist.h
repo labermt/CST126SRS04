@@ -10,10 +10,14 @@ private:
 	struct node
 	{
 		node * next_;
-		CSWoman * data_{ nullptr };
+		CSWoman const * const data_{ nullptr };
+
+	public:
+		node(node * next, CSWoman const * const data);
 	};
-	const node* head_{ nullptr };
-	//void reverse(node * const head);//may need const before node
+	node* head_{ nullptr };
 	node* reverse(node * const head) const;
-	void add(const CSWoman* const cswoman) const;
+
+public:
+	void add(CSWoman const * const cswoman);
 };
