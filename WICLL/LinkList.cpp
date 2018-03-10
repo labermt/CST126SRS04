@@ -15,7 +15,22 @@ void LinkList::reverse(Node* head)
 	head = prev;
 }
 
-LinkList::Node::Node(Node * next, CSWoman * data):
+void LinkList::add(CSWoman* data)
+{
+
+}
+
+void LinkList::print_list()
+{
+	
+}
+
+void LinkList::delete_list()
+{
+
+}
+
+LinkList::Node::Node(Node* next, CSWoman* data):
 	next_{next}, data_{data}
 {
 
