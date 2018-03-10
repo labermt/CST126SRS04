@@ -41,8 +41,8 @@ void CSWoman::AddNode(string name, unsigned year, string fact)
 //pass in data and stored in delData
 //walk through list until we come across node with value = delData
 //delete that node and patch up list
-/*
-void CSWoman::DeleteNode(int delData) 
+
+void CSWoman::DeleteNode(string delName) 
 	{
 	nodePtr delPtr = nullptr;
 	temp = head;
@@ -51,14 +51,14 @@ void CSWoman::DeleteNode(int delData)
 	//check to see if curr node is the one we want to delete.
 	//temp will trail curr so we can patch node
 
-	while (curr != nullptr && curr->data != delData)
+	while (curr != nullptr && curr->name_ != delName)
 	{
 		temp = curr;
 		curr = curr->next;
 	}
 	if (curr == nullptr)
 	{
-		cout << delData << " was not in the list\n";
+		cout << delName << " was not in the list\n";
 		delete delPtr;
 	}
 	else
@@ -72,11 +72,11 @@ void CSWoman::DeleteNode(int delData)
 			temp = nullptr;
 		}
 		delete delPtr;
-		cout << "The value " << delData << " was deleted\n";
+		cout << "The person, " << delName << ", was removed from the list.\n" << endl;;
 
 	}
 }
-*/
+
 
 void CSWoman::PrintList()
 {

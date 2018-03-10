@@ -22,7 +22,7 @@ private:
 public:
 	CSWoman();
 	void AddNode(string name, unsigned year, string fact);
-//	void DeleteNode(int delData);
+	void DeleteNode(string delName);
 	void PrintList();
 
 };
