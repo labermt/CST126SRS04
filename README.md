@@ -2,13 +2,13 @@
 Women In Computing Linked List  
 
 
-Class ID: 
+Class ID: Drilbur  
 
 SRS ID: CST126SRS04  
 
 Unresolved Issues:  
 
-Notes:  
+Notes: Compiled with Visual Studio 2017 on Windows 10.  
 
 ---
 
