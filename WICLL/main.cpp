@@ -13,7 +13,6 @@
 
 int main()
 {
-	{
 	CSWoman * woman1 = new CSWoman("Ada Lovelace", 1815, "Ada is considered the first computer programmer.");
 	CSWoman * woman2 = new CSWoman("Grete Hermann", 1901, "Grete created the foundations of computational algebra.");
 	CSWoman * woman3 = new CSWoman("Grace Hopper", 1906, "Grace created COBOL and the first compiler.");
@@ -37,10 +36,11 @@ int main()
 	women.addToList(woman9);
 	women.addToList(woman10);
 
-		std::cout << women << std::endl;
-//		women.reverse(women.getHead());
-		std::cout << women << std::endl;
-	}
+	std::cout << women;
+	women.reverse();
+	std::cout << "~~~~Here is the list in reverse order~~~~" << std::endl;
+	std::cout << std::endl;
+	std::cout << women << std::endl;
 
 	_CrtDumpMemoryLeaks();
 	return 0;

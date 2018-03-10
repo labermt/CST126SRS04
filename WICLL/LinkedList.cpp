@@ -35,10 +35,10 @@ const LinkedList::Node * LinkedList::getHead() const
 	return head_;
 }
 
-void LinkedList::reverse(Node* head)
+void LinkedList::reverse()
 {
 	Node* prev{ nullptr };
-	auto curr{ head };
+	auto curr{ head_ };
 	while (curr != nullptr)
 	{
 		const auto next = curr->next_;
@@ -46,7 +46,7 @@ void LinkedList::reverse(Node* head)
 		prev = curr;
 		curr = next;
 	}
-	head = prev;
+	head_ = prev;
 }
 
 void LinkedList::addToList(CSWoman * const woman)
@@ -55,26 +55,17 @@ void LinkedList::addToList(CSWoman * const woman)
 	head_ = first;
 }
 
-void LinkedList::printList()
-{
-
-}
-
 std::ostream & operator<<(std::ostream & os, const LinkedList & list)
 {
-	auto head = list.getHead();
-	if(head != nullptr)
-	{
-		os << *head;
-		auto tail{ head -> getNext()};
-		if (tail != nullptr) os << *tail;
-	}
+	if(list.getHead() != nullptr) os << *list.getHead();
 
 	return os;
 }
 
 std::ostream & operator<<(std::ostream & os, const LinkedList::Node & node)
 {
-	os << node.getData() << std::endl;
+	os << *node.getData();
+	if (node.getNext() != nullptr) os << *node.getNext();
+
 	return os;
 }

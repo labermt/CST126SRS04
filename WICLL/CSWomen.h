@@ -16,8 +16,6 @@ public:
 	std::string getName() const;
 	unsigned getYear() const;
 	std::string getFact() const;
-	
-	// ... and other methods  
 };
 
 std::ostream & operator<<(std::ostream & os, const CSWoman & woman);

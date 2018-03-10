@@ -30,9 +30,8 @@ public:
 
 public:
 	const Node * getHead() const;
-	void reverse(Node* head);
+	void reverse();
 	void addToList(CSWoman* const woman);
-	void printList();
 }; 
 
 std::ostream & operator<<(std::ostream & os, const LinkedList & list);
