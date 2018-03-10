@@ -3,7 +3,7 @@
 
 class LinkList
 {
-private:
+public:
 	class Node 
 	{
 		friend LinkList;
@@ -14,16 +14,23 @@ private:
 
 	public:
 		Node(Node* next, CSWoman* data);
+		const CSWoman* get_data() const;
+		const Node* get_next() const;
+		~Node();
 	};
 
+private:
 	Node* head_{ nullptr };
-	Node* tail_{nullptr};
 
 public:
-	// set note to pass in pointer ref
+	~LinkList();
+
+public:
+	void reverse();
+	void add(CSWoman* const cs_woman);
+	const Node* get_head() const;
 	
-	static void reverse(Node* head);
-	static void add( CSWoman* data);
-	static void print_list();
-	static void delete_list();
 };
+
+std::ostream& operator<<(std::ostream&os, const LinkList& list);
+std::ostream& operator<<(std::ostream&os, const LinkList::Node& node);

@@ -11,5 +11,9 @@ private:
 
 public:
 	CSWoman(const char* const name, const unsigned birthYear, const char* const fact);
+	std::string get_name() const;
+	unsigned get_byear() const;
+	std::string get_fact() const ;
 };
 
+std::ostream& operator<<(std::ostream&os, const CSWoman& woman);

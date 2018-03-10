@@ -1,10 +1,18 @@
 #include "stdafx.h"
 #include "LinkList.h"
+#include <iostream>
 
-void LinkList::reverse(Node* head)
+
+LinkList::~LinkList()
+{
+	delete head_;
+
+}
+
+void LinkList::reverse()
 {
 	Node* prev{ nullptr };
-	auto curr{ head };
+	auto curr{ head_ };
 	while (curr != nullptr)
 	{
 		const auto next = curr -> next_;
@@ -12,26 +20,60 @@ void LinkList::reverse(Node* head)
 		prev = curr;
 		curr = next;
 	}
-	head = prev;
+	head_ = prev;
 }
 
-void LinkList::add(CSWoman* data)
+void LinkList::add(CSWoman* const cs_woman)
 {
-
+	auto const node = new Node(head_, cs_woman);
+	head_ = node;
 }
 
-void LinkList::print_list()
+
+const LinkList::Node* LinkList::get_head() const
 {
-	
+	return head_;
 }
 
-void LinkList::delete_list()
-{
-
-}
-
-LinkList::Node::Node(Node* next, CSWoman* data):
+LinkList::Node::Node(Node* next,  CSWoman* data):
 	next_{next}, data_{data}
 {
 
+}
+
+const CSWoman* LinkList::Node::get_data() const
+{
+	return data_;
+}
+
+const LinkList::Node * LinkList::Node::get_next() const
+{
+	return next_;
+}
+
+LinkList::Node::~Node()
+{
+	delete data_;
+	delete next_;
+}
+
+std::ostream& operator<<(std::ostream&os, const LinkList& list)
+{
+	auto const head = list.get_head();
+	if (head != nullptr)
+	{
+		os << *head;
+	}
+	return os;
+}
+
+std::ostream& operator<<(std::ostream& os, const LinkList::Node& node)
+{
+	os << *node.get_data();
+	auto const tail{ node.get_next() };
+	if (tail != nullptr)
+	{
+		os << *tail;
+	}
+	return os;
 }
