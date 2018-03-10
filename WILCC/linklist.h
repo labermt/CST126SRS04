@@ -2,19 +2,22 @@
 #include "CSWoman.h"
 
 
-class list
-{
-public:
-
-private:
-	node * head_;
-};
-
 class node
 {
-public:
-	node(CSWoman * mynode);
 private:
-	CSWoman * mynode_;
-	CSWoman * next_{};
+	const CSWoman * const myinfo_ ;
+	CSWoman * next_{nullptr};
+public:
+	node(const CSWoman data);
+	void setnext(CSWoman data);
+	void getmyinfo();
+};
+
+class list
+{
+private:
+	node * head_{};
+	node * tail_{};
+public:
+	list(node head, node tail);
 };
