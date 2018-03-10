@@ -8,33 +8,34 @@ using namespace std;
 
 CSWoman::CSWoman()
 {
-	head = nullptr;
-	curr = nullptr;
-	temp = nullptr;
+	head_ = nullptr;
+	curr_ = nullptr;
+	temp_ = nullptr;
 }
 
-void CSWoman::AddNode(string name, unsigned year, string fact) 
+void CSWoman::addNode(const string name, const unsigned year, const string fact) 
 	{
-	nodePtr n = new node;  //create a new node pointer called n and creating new node. new poitner points to that.
+	auto n = new node;  //create a new node pointer called n and creating new node. new poitner points to that.
 	n->next = nullptr;
-	n->name_ = name;
-	n->birthYear_ = year;
-	n->fact_ = fact;
+	n->name = name;
+	n->birth_year = year;
+	n->fact = fact;
 
 
 	//if there is already a list
-	if (head != nullptr) 
+	if (head_ != nullptr) 
 		{
-		curr = head;
+		curr_ = head_;
 		//check to see if it is the last node in the list
-		while (curr->next != nullptr) {
-			curr = curr->next; //current pointer points to next until its last node in the list
+		while (curr_->next != nullptr) 
+		{
+			curr_ = curr_->next; //current pointer points to next until its last node in the list
 		}
-		curr->next = n;
+		curr_->next = n;
 	}
 	else
 	{
-		head = n;
+		head_ = n;
 	}
 }
 
@@ -42,45 +43,45 @@ void CSWoman::AddNode(string name, unsigned year, string fact)
 //walk through list until we come across node with value = delData
 //delete that node and patch up list
 
-void CSWoman::DeleteNode(string delName) 
+void CSWoman::deleteNode(string del_name) 
 	{
 	nodePtr delPtr = nullptr;
-	temp = head;
-	curr = head;
+	temp_ = head_;
+	curr_ = head_;
 
 	//check to see if curr node is the one we want to delete.
 	//temp will trail curr so we can patch node
 
-	while (curr != nullptr && curr->name_ != delName)
+	while (curr_ != nullptr && curr_->name != del_name)
 	{
-		temp = curr;
-		curr = curr->next;
+		temp_ = curr_;
+		curr_ = curr_->next;
 	}
-	if (curr == nullptr)
+	if (curr_ == nullptr)
 	{
-		cout << delName << " was not in the list\n";
+		cout << del_name << " was not in the list\n";
 		delete delPtr;
 	}
 	else
 	{
-		delPtr = curr;
-		curr = curr->next; //advances curr to next node
-		temp->next = curr; //patches the the hole in the list
-		if (delPtr == head)
+		delPtr = curr_;
+		curr_ = curr_->next; //advances curr to next node
+		temp_->next = curr_; //patches the the hole in the list
+		if (delPtr == head_)
 		{
-			head = head->next;
-			temp = nullptr;
+			head_ = head_->next;
+			temp_ = nullptr;
 		}
 		delete delPtr;
-		cout << "The person, " << delName << ", was removed from the list.\n" << endl;;
+		cout << "The person, " << del_name << ", was removed from the list.\n" << endl;;
 
 	}
 }
 
 void CSWoman::reverseList()
 {
-		nodePtr prev{ nullptr };
-		auto curr{ head };
+		nodePtr prev = nullptr;
+		auto curr = head_;
 		while (curr != nullptr)
 		{
 			const auto next = curr->next;
@@ -88,7 +89,7 @@ void CSWoman::reverseList()
 			prev = curr;
 			curr = next;
 		}
-		head = prev;
+		head_ = prev;
 	}
 
 
@@ -96,15 +97,15 @@ void CSWoman::reverseList()
 
 
 
-void CSWoman::PrintList()
+void CSWoman::printList()
 {
-	curr = head;
-	while (curr != nullptr)
+	curr_= head_;
+	while (curr_ != nullptr)
 	{
-		cout << "Name: " << curr->name_ << endl;
-		cout << "Born: " << curr->birthYear_ << endl;
-		cout << "Fun fact: " << curr->fact_ << endl << endl;
-		curr = curr->next;
+		cout << "Name: " << curr_->name << endl;
+		cout << "Born: " << curr_->birth_year << endl;
+		cout << "Fun fact: " << curr_->fact << endl << endl;
+		curr_ = curr_->next;
 	}
 }
 

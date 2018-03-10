@@ -9,22 +9,22 @@ class CSWoman
 private:
 	typedef struct node
 	{
-		string name_;
-		unsigned birthYear_;
-		string fact_;
+		string name;
+		unsigned birth_year;
+		string fact;
 		node* next;
 	}*nodePtr;
 
-	nodePtr head;
-	nodePtr curr;
-	nodePtr temp;
-	nodePtr prev;
+	nodePtr head_;
+	nodePtr curr_;
+	nodePtr temp_;
+	
 
 public:
 	CSWoman();
-	void AddNode(string name, unsigned year, string fact);
-	void DeleteNode(string delName);
+	void addNode(const string name, const unsigned year, const string fact);
+	void deleteNode(string del_name);
 	void reverseList();
-	void PrintList();
+	void printList();
 
 };
