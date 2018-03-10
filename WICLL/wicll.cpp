@@ -77,6 +77,24 @@ void CSWoman::DeleteNode(string delName)
 	}
 }
 
+void CSWoman::reverseList()
+{
+		nodePtr prev{ nullptr };
+		auto curr{ head };
+		while (curr != nullptr)
+		{
+			const auto next = curr->next;
+			curr->next = prev;
+			prev = curr;
+			curr = next;
+		}
+		head = prev;
+	}
+
+
+
+
+
 
 void CSWoman::PrintList()
 {

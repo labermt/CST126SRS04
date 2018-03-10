@@ -10,7 +10,7 @@ private:
 	typedef struct node
 	{
 		string name_;
-		int birthYear_;
+		unsigned birthYear_;
 		string fact_;
 		node* next;
 	}*nodePtr;
@@ -18,11 +18,13 @@ private:
 	nodePtr head;
 	nodePtr curr;
 	nodePtr temp;
+	nodePtr prev;
 
 public:
 	CSWoman();
 	void AddNode(string name, unsigned year, string fact);
 	void DeleteNode(string delName);
+	void reverseList();
 	void PrintList();
 
 };
