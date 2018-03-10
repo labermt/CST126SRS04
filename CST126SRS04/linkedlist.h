@@ -7,11 +7,13 @@
 class linkedlist
 {
 private:
-	class node
+	struct node
 	{
 		node * next_;
 		CSWoman * data_{ nullptr };
 	};
-	void reverse(node * const head);//may need const before node
-	void add(const CSWoman* const cswoman);
+	const node* head_{ nullptr };
+	//void reverse(node * const head);//may need const before node
+	node* reverse(node * const head) const;
+	void add(const CSWoman* const cswoman) const;
 };
