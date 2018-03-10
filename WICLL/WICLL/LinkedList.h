@@ -6,9 +6,9 @@ class Node
 {
 public:
 	Node* next_;
-	CSWoman woman_;
+	const CSWoman woman_;
 
-	Node(Node* next, CSWoman& woman);
+	Node(Node* next, const CSWoman& woman);
 	~Node();
 };
 
@@ -16,11 +16,15 @@ class LinkedList
 {
 private:
 	Node * m_head;
+	Node * temp_node;
+	Node * node;
 
 public:
 	LinkedList();
 	~LinkedList();
-	void reverse(Node* head);
-	void add(CSWoman* woman);
+	void reverse();
+	void clearList();
+	void printList();
+	void add(const CSWoman* const woman);
 };
 

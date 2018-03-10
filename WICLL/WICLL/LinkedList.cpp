@@ -1,10 +1,12 @@
 #include "stdafx.h"
+#include <iostream>
 #include "LinkedList.h"
 
-void LinkedList::reverse(Node* head)
+void LinkedList::reverse()
 {
+	//Code based on Mitch's slides
 	Node* prev{ nullptr };
-	auto curr{ head };
+	auto curr{ m_head };
 	while (curr != nullptr)
 	{
 		const auto next = curr->next_;
@@ -12,19 +14,49 @@ void LinkedList::reverse(Node* head)
 		prev = curr;
 		curr = next;
 	}
-	head = prev;
-
+	m_head = prev;
 }
 
-void LinkedList::add(CSWoman * woman)
+void LinkedList::clearList()
 {
-	//TODO
-	
-	Node* node = new Node(nullptr, *woman);
+	Node * next = m_head;
+	Node * deleteNode = next;
+	while (next != nullptr)
+	{
+		next = next->next_;
+		delete deleteNode;
+		deleteNode = next;
+	}
+}
+
+void LinkedList::printList()
+{
+	Node * next = m_head;
+	while (next != nullptr)
+	{
+		next->woman_.print();
+		next = next->next_;
+	}
+}
+
+void LinkedList::add(const CSWoman * const woman)
+{
+	if (m_head == nullptr) {
+		//init list
+		m_head = new Node(nullptr, *woman);
+		node = m_head;
+		temp_node = m_head;
+	}
+	else {
+		//add node
+		node = new Node(nullptr, *woman);
+		temp_node->next_ = node;
+		temp_node = node;
+	}
 }
 
 //Ctors and Dtors
-Node::Node(Node * next, CSWoman& woman)
+Node::Node(Node * next, const CSWoman& woman)
 	:next_{next}, woman_{woman}
 {
 }
