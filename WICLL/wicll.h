@@ -22,7 +22,7 @@ private:
 
 public:
 	CSWoman();
-	void addNode(const string name, const unsigned year, const string fact);
+	void addNode(string name, unsigned year, string fact);
 	void deleteNode(string del_name);
 	void reverseList();
 	void printList();

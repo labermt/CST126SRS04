@@ -93,10 +93,6 @@ void CSWoman::reverseList()
 	}
 
 
-
-
-
-
 void CSWoman::printList()
 {
 	curr_= head_;
