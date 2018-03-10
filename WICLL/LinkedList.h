@@ -6,20 +6,34 @@
 
 class LinkedList
 {
-private:
+public:
 	class Node
 	{
 		friend LinkedList;
 
+	private:
 		Node* next_;
 		CSWoman* data_;
 
 	public:
 		Node(Node * next, CSWoman * data);
+		~Node();
+		const CSWoman * getData() const;
+		const Node * getNext() const;
 	};
 
+private:
 	Node* head_ = nullptr;
 
 public:
-	static void reverse(Node* head);
-};
+	~LinkedList();
+
+public:
+	const Node * getHead() const;
+	void reverse(Node* head);
+	void addToList(CSWoman* const woman);
+	void printList();
+}; 
+
+std::ostream & operator<<(std::ostream & os, const LinkedList & list);
+std::ostream & operator<<(std::ostream & os, const LinkedList::Node & node);

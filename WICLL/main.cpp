@@ -6,9 +6,14 @@
 #include "LinkedList.h"
 #include <iostream>
 
+#define _CRTDBG_MAP_ALLOC
+#include <cstdlib>
+#include <crtdbg.h>
+
 
 int main()
 {
+	{
 	CSWoman * woman1 = new CSWoman("Ada Lovelace", 1815, "Ada is considered the first computer programmer.");
 	CSWoman * woman2 = new CSWoman("Grete Hermann", 1901, "Grete created the foundations of computational algebra.");
 	CSWoman * woman3 = new CSWoman("Grace Hopper", 1906, "Grace created COBOL and the first compiler.");
@@ -20,6 +25,24 @@ int main()
 	CSWoman * woman9 = new CSWoman("Patricia Selinger", 1949, "Patricia was a key author of IBM System R, and an IBM Fellow.");
 	CSWoman * woman10 = new CSWoman("Marissa Mayer", 1975, "Marissa was the first female engineer at Google.");
 
+	LinkedList women;
+	women.addToList(woman1);
+	women.addToList(woman2);
+	women.addToList(woman3);
+	women.addToList(woman4);
+	women.addToList(woman5);
+	women.addToList(woman6);
+	women.addToList(woman7);
+	women.addToList(woman8);
+	women.addToList(woman9);
+	women.addToList(woman10);
+
+		std::cout << women << std::endl;
+//		women.reverse(women.getHead());
+		std::cout << women << std::endl;
+	}
+
+	_CrtDumpMemoryLeaks();
 	return 0;
 }
 

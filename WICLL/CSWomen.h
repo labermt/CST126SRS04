@@ -13,7 +13,12 @@ private:
 
 public:
 	CSWoman(const char* const name, const unsigned birthYear, const char* const fact);
-
+	std::string getName() const;
+	unsigned getYear() const;
+	std::string getFact() const;
+	
 	// ... and other methods  
 };
+
+std::ostream & operator<<(std::ostream & os, const CSWoman & woman);
 
