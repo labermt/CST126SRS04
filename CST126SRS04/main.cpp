@@ -23,24 +23,37 @@ int main()
 	CSWoman * woman8{ new CSWoman("Anita Borg", 1949, "She founded the Institute for Women and Technology and the Grace Hopper Celebration of Women in Computing\n") };
 	CSWoman * woman9{ new CSWoman("Lucy Sanders", 1954, "co-founded the National Center for Women & Information Technology\n") };
 	 
+	if 
+	(
+		woman0 != nullptr &&
+		woman1 != nullptr &&
+		woman2 != nullptr &&
+		woman3 != nullptr &&
+		woman4 != nullptr &&
+		woman5 != nullptr &&
+		woman6 != nullptr &&
+		woman7 != nullptr &&
+		woman8 != nullptr &&
+		woman9 != nullptr
+	)
 	{
-		new char; //intentional garbage that willbe removed 
+		new char; //intentional garbage that will be removed 
 		linkedlist ll;
-		ll.add(woman0);
-		ll.add(woman1);
-		ll.add(woman2);
-		ll.add(woman3);
-		ll.add(woman4);
-		ll.add(woman5);
-		ll.add(woman6);
-		ll.add(woman7);
-		ll.add(woman8);
-		ll.add(woman9);
+		ll.add(*woman0);
+		ll.add(*woman1);
+		ll.add(*woman2);
+		ll.add(*woman3);
+		ll.add(*woman4);
+		ll.add(*woman5);
+		ll.add(*woman6);
+		ll.add(*woman7);
+		ll.add(*woman8);
+		ll.add(*woman9);
 
-		std::cout << ll <<std::endl;
+		std::cout << ll << std::endl;
 		ll.reverse();
-		std::cout << ll <<std::endl;
-	}
+		std::cout << ll << std::endl;
+	} 
 	_CrtDumpMemoryLeaks();
     return 0;
 };

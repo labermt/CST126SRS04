@@ -1,5 +1,5 @@
-#include "linkedlist.h"
 #include "stdafx.h"
+#include "linkedlist.h"
 
 void linkedlist::reverse()
 {
@@ -17,13 +17,50 @@ void linkedlist::reverse()
 	head_ = prev; 
 }
 
-void linkedlist::add(CSWoman const * const cswoman) 
+const linkedlist::node* linkedlist::getHead() const
+{
+	return head_; 
+}
+
+void linkedlist::add(CSWoman const & cswoman) 
 {
 	auto const var{ new node(head_, cswoman) }; 
 	head_ = var; 
 }
 
-linkedlist::node::node(node * const next, CSWoman const * const data) :
+linkedlist::node::node(node * const next, CSWoman const & data) :
 	next_{ next }, data_{ data }
 {
+}
+
+CSWoman const & linkedlist::node::getData() const
+{
+	return data_;
+}
+
+const linkedlist::node* linkedlist::node::getNext() const
+{
+	return next_;
+}
+
+std::ostream & operator<<(std::ostream & os, linkedlist::node const & node)
+{
+	os << node.getData() << std::endl;
+	return os;
+}
+
+std::ostream & operator<<(std::ostream & os, linkedlist const & ll)
+{
+	auto head{ ll.getHead() };
+	if (head != nullptr)
+	{
+		os << *head;
+		auto tail{ head->getNext() };
+		if (tail != nullptr)
+		{
+			os << *tail;
+		}
+		os << std::endl;
+	}
+	return os; 
 }

@@ -4,20 +4,29 @@
 #include "linkedlist.h"
 #include <iostream>
 
-class linkedlist
-{
-private:
-	struct node
-	{
+class linkedlist 
+{ 
+public:
+	struct node 
+	{ 
+		friend linkedlist;
+
+	private: 
 		node * next_;
-		CSWoman const * const data_{ nullptr };
+		CSWoman const & data_;
 
 	public:
-		node(node * next, CSWoman const * const data);
+		node(node * next, CSWoman const & data);
+		CSWoman const & getData() const; 
+		const node* getNext() const; 
 	};
+
+private:
 	node* head_{ nullptr };
 
 public:
-	void add(CSWoman const * const cswoman);
+	void add(CSWoman const & cswoman);
 	void reverse();
+	const node* getHead() const;
 };
+std::ostream& operator<<(std::ostream&, linkedlist const &);
