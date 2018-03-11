@@ -3,7 +3,7 @@
 #include "LinkedList.h"
 #include <iostream>
 
-LinkedList::Node::Node(Node* next, CSWoman * data):
+LinkedList::Node::Node(Node* next, CSWoman* data):
 	next_{next}, 
 	data_{data}
 {
@@ -15,12 +15,12 @@ LinkedList::Node::~Node()
 	delete next_;
 }
 
-const CSWoman * LinkedList::Node::getData() const
+const CSWoman* LinkedList::Node::getData() const
 {
 	return Node::data_;
 }
 
-const LinkedList::Node * LinkedList::Node::getNext() const
+const LinkedList::Node* LinkedList::Node::getNext() const
 {
 	return next_;
 }
@@ -30,9 +30,15 @@ LinkedList::~LinkedList()
 	delete head_;
 }
 
-const LinkedList::Node * LinkedList::getHead() const
+const LinkedList::Node* LinkedList::getHead() const
 {
 	return head_;
+}
+
+void LinkedList::addToList(CSWoman* const woman)
+{
+	auto const first = new Node(head_, woman);
+	head_ = first;
 }
 
 void LinkedList::reverse()
@@ -49,15 +55,9 @@ void LinkedList::reverse()
 	head_ = prev;
 }
 
-void LinkedList::addToList(CSWoman * const woman)
-{
-	auto const first = new Node(head_, woman);
-	head_ = first;
-}
-
 std::ostream & operator<<(std::ostream & os, const LinkedList & list)
 {
-	if(list.getHead() != nullptr) os << *list.getHead();
+	if (list.getHead() != nullptr) os << *list.getHead();
 
 	return os;
 }

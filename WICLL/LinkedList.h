@@ -13,13 +13,15 @@ public:
 
 	private:
 		Node* next_;
-		CSWoman* data_;
+		const CSWoman* const data_;
 
 	public:
-		Node(Node * next, CSWoman * data);
+		Node(Node* next, CSWoman* data);
 		~Node();
-		const CSWoman * getData() const;
-		const Node * getNext() const;
+
+	public:
+		const CSWoman* getData() const;
+		const Node* getNext() const;
 	};
 
 private:
@@ -29,10 +31,11 @@ public:
 	~LinkedList();
 
 public:
-	const Node * getHead() const;
-	void reverse();
+	// TODO: Why no/Default constructor?
+	const Node* getHead() const;
 	void addToList(CSWoman* const woman);
+	void reverse();
 }; 
 
-std::ostream & operator<<(std::ostream & os, const LinkedList & list);
-std::ostream & operator<<(std::ostream & os, const LinkedList::Node & node);
+std::ostream& operator<<(std::ostream & os, const LinkedList& list);
+std::ostream& operator<<(std::ostream & os, const LinkedList::Node& node);
