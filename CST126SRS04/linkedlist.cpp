@@ -22,10 +22,21 @@ const linkedlist::node* linkedlist::getHead() const
 	return head_; 
 }
 
-void linkedlist::add(CSWoman const & cswoman) 
+linkedlist::~linkedlist()
+{
+	delete head_; 
+}
+
+void linkedlist::add(CSWoman const & cswoman)
 {
 	auto const var{ new node(head_, cswoman) }; 
 	head_ = var; 
+}
+
+linkedlist::node::~node()
+{
+	delete next_; 
+	delete &data_; 
 }
 
 linkedlist::node::node(node * const next, CSWoman const & data) :
@@ -45,22 +56,23 @@ const linkedlist::node* linkedlist::node::getNext() const
 
 std::ostream & operator<<(std::ostream & os, linkedlist::node const & node)
 {
-	os << node.getData() << std::endl;
+	os << node.getData();
+	auto const tail(node.getNext());
+	if (tail != nullptr)
+	{
+		os << *tail;
+	}
 	return os;
 }
 
 std::ostream & operator<<(std::ostream & os, linkedlist const & ll)
 {
-	auto head{ ll.getHead() };
+	auto const head{ ll.getHead() };
 	if (head != nullptr)
 	{
 		os << *head;
 		auto tail{ head->getNext() };
-		if (tail != nullptr)
-		{
-			os << *tail;
-		}
-		os << std::endl;
 	}
+	
 	return os; 
 }

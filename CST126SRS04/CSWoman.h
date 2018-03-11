@@ -16,3 +16,5 @@ public:
 	unsigned getBirthYear() const; 
 	std::string getFact() const; 
 };
+
+std::ostream & operator<<(std::ostream & os, CSWoman const & lady);

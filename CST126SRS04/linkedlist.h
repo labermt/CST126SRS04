@@ -14,13 +14,15 @@ public:
 	private: 
 		node * next_;
 		CSWoman const & data_;
-
+	public:
+		~node(); 
 	public:
 		node(node * next, CSWoman const & data);
 		CSWoman const & getData() const; 
 		const node* getNext() const; 
 	};
-
+public:
+	~linkedlist();
 private:
 	node* head_{ nullptr };
 

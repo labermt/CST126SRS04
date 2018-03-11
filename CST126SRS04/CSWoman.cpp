@@ -24,6 +24,6 @@ std::string CSWoman::getFact() const
 
 std::ostream & operator<<(std::ostream & os, CSWoman const & lady )
 {
-	os << lady.getName() << ", " << lady.getBirthYear() << ", " << lady.getFact() << ", " << std::endl;
+	os << lady.getName() << ", " << lady.getBirthYear() << ", " << lady.getFact() << std::endl;
 	return os;
 }
