@@ -7,13 +7,13 @@
 int main()
 {
 	LinkList cs_women;
-	const auto w0 = new CSWoman("Ada Lovelace", 1815, "she was an analyst of Charles Babbage's analytical engine and is considered by many the first computer programmer");
+	const auto w0 = new CSWoman("Ada Lovelace", 1815, "she was an analyst of Charles Babbage's analytical engine and is considered by many the first computer programmer.");
 	cs_women.add(w0);
 	const auto w1 = new CSWoman("Kathleen Booth", 1922, "she was credited with writing the assembly language for the ARC2 computer.");
 	cs_women.add(w1);
-	const auto w2 = new CSWoman("Carol Shaw", 1955, "she was an Atari Game Dev");
+	const auto w2 = new CSWoman("Carol Shaw", 1955, "she was an Atari Game Dev.");
 	cs_women.add(w2);
-	const auto w3 = new CSWoman("Dana Ulery", 1938, "she was the first female engineer at Jet Propulsion Laboratory, developing real-time tracking systems using a North American Aviation Recomp II");
+	const auto w3 = new CSWoman("Dana Ulery", 1938, "she was the first female engineer at Jet Propulsion Laboratory, developing real-time tracking systems using a North American Aviation Recomp II.");
 	cs_women.add(w3);
 	const auto w4 = new CSWoman("Joan Ball", 1934, "she was the first person to start a computer dating service in 1964.");
 	cs_women.add(w4);
