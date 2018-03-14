@@ -15,4 +15,5 @@ public:
 	std::string getname();
 	std::string getfact();
 	unsigned getbirthyear();
+	void printInfo();
 };

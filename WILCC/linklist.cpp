@@ -2,20 +2,38 @@
 #include "linklist.h"
 #include <iostream>
 
-node::node(const CSWoman data) : myinfo_ (&data)
+node::node(const CSWoman &data) : myinfo_ (&data)
 { }
 
-void node::setnext(CSWoman data)
+void node::setnext(node &data)
 {
 	next_ = &data ;
 }
 
-void node::getmyinfo()
+void node::printmyinfo()
 {
-	std::cout << myinfo_.CSWoman::getname;
-	std::cout << myinfo_.getbirthyear;
-	std::cout << myinfo_.getfact;
+	myinfo_->printInfo;
 }
 
-list::list(node head, node tail) : head_ (&head), tail_ (&tail)
-{ }
+void list::addfunc(CSWoman &data)
+{
+	node filler{ data };
+	if (head_ == nullptr)
+	{
+		head_ = &filler;
+	}
+	else
+	{
+		filler.setnext(*head_);
+		head_ = &filler;
+	}
+}
+
+void list::printlist()
+{
+	node * current = head_;
+	while (head_ != nullptr)
+	{
+
+	}
+}

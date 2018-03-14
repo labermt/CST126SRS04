@@ -6,18 +6,18 @@ class node
 {
 private:
 	const CSWoman * const myinfo_ ;
-	CSWoman * next_{nullptr};
+	node * next_{nullptr};
 public:
-	node(const CSWoman data);
-	void setnext(CSWoman data);
-	void getmyinfo();
+	node(const CSWoman &data);
+	void setnext(node &data);
+	void printmyinfo();
 };
 
 class list
 {
 private:
 	node * head_{};
-	node * tail_{};
 public:
-	list(node head, node tail);
+	void addfunc(CSWoman &data);
+	void printlist();
 };
