@@ -1,39 +1,46 @@
 #include "stdafx.h"
-#include "linklist.h"
 #include <iostream>
+#include <cassert>
+#include "linklist.h"
 
-node::node(const CSWoman &data) : myinfo_ (&data)
+node::node(const CSWoman data) : myinfo_{ new CSWoman{data} }
 { }
 
-void node::setnext(node &data)
+CSWoman node::getinfo() const
 {
-	next_ = &data ;
+	return *myinfo_;
+}
+
+node * node::getnext() const
+{
+	return next_;
+}
+
+void node::setnext(node* data)
+{
+	next_ = data ;
 }
 
 void node::printmyinfo()
 {
-	myinfo_->printInfo;
+	//myinfo_->printInfo;
 }
 
-void list::addfunc(CSWoman &data)
+void list::addfunc(CSWoman data)
 {
-	node filler{ data };
-	if (head_ == nullptr)
-	{
-		head_ = &filler;
-	}
-	else
-	{
-		filler.setnext(*head_);
-		head_ = &filler;
-	}
+	auto filler = new node { data };
+	assert(filler != nullptr);
+	filler->setnext(head_);
+	head_ = filler;
 }
 
 void list::printlist()
 {
 	node * current = head_;
-	while (head_ != nullptr)
+	while (current != nullptr)
 	{
-
+		auto cswoman{ current->getinfo() };
+		cswoman.printInfo();
+		current = current->getnext();
 	}
 }

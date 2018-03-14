@@ -24,7 +24,7 @@ unsigned CSWoman::getbirthyear()
 
 void CSWoman::printInfo()
 {
-	std::cout << name_;
-	std::cout << birthYear_;
-	std::cout << fact_;
+	std::cout << name_ << " ";
+	std::cout << birthYear_ << " ";
+	std::cout << fact_ << "\n";
 }
