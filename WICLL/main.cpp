@@ -30,15 +30,15 @@ int main()
 	cs_women.add(w9);
 
 	std::cout << "The list of CS women is:" << std::endl;
-	std::cout << std::setfill('-')<< std::setw(100)<<"-"<< std::endl;
+	std::cout << std::setfill('-')<< std::setw(60)<<"-"<< std::endl;
 	std::cout << cs_women << std::flush;
-	std::cout << std::setfill('-')<< std::setw(100)<<"-"<< std::endl;
+	std::cout << std::setfill('-')<< std::setw(60)<<"-"<< std::endl;
 	std::cout << std::endl;
 	cs_women.reverse();
 	std::cout << "The list of Computer Science women in reverse:"<< std::endl;
-	std::cout << std::setfill('-')<< std::setw(100)<<"-"<< std::endl;
+	std::cout << std::setfill('-')<< std::setw(60)<<"-"<< std::endl;
 	std::cout << cs_women << std::flush;
-	std::cout << std::setfill('-')<< std::setw(100)<<"-"<< std::endl;
+	std::cout << std::setfill('-')<< std::setw(60)<<"-"<< std::endl;
     return 0;
 }
 
