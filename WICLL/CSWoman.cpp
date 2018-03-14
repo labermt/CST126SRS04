@@ -27,7 +27,8 @@ std::ostream& operator<<(std::ostream&os, const CSWoman& woman)
 {
 	std::cout << "Name: " << woman.get_name() << "\n";
 	std::cout << "Birth Year: " << woman.get_byear() << "\n";
-	std::cout << "A Fact about " << woman.get_name() << " is " << woman.get_fact() << "\n\n";
+	std::cout << "A Fact about " << woman.get_name() << " is ";
+	std::cout << woman.get_fact() << "\n\n";
 	return os;
 }
 
