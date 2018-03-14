@@ -21,10 +21,10 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CSWoman.h">
+    <ClInclude Include="link_list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LinkList.h">
+    <ClInclude Include="cs_woman.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,10 +35,10 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CSWoman.cpp">
+    <ClCompile Include="link_list.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LinkList.cpp">
+    <ClCompile Include="cs_woman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
