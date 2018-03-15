@@ -31,7 +31,6 @@ public:
 	~LinkedList();
 
 public:
-	// TODO: Why no/Default constructor?
 	const Node* getHead() const;
 	void addToList(CSWoman* const woman);
 	void reverse();

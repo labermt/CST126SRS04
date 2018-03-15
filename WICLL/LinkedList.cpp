@@ -1,5 +1,4 @@
 #include "stdafx.h"
-
 #include "LinkedList.h"
 #include <iostream>
 
@@ -55,14 +54,14 @@ void LinkedList::reverse()
 	head_ = prev;
 }
 
-std::ostream & operator<<(std::ostream & os, const LinkedList & list)
+std::ostream& operator<<(std::ostream & os, const LinkedList & list)
 {
 	if (list.getHead() != nullptr) os << *list.getHead();
 
 	return os;
 }
 
-std::ostream & operator<<(std::ostream & os, const LinkedList::Node & node)
+std::ostream& operator<<(std::ostream & os, const LinkedList::Node & node)
 {
 	os << *node.getData();
 	if (node.getNext() != nullptr) os << *node.getNext();

@@ -2,14 +2,13 @@
 Women In Computing Linked List  
 
 
-Class ID: 
+Class ID: Persian
 
 SRS ID: CST126SRS04  
 
 Unresolved Issues:  
 
-Notes:  
-
+Notes:  Why is resharper complaining about my CSWomen getters returning const, but not for my linkedlist getters?
 ---
 
 Purpose:  
