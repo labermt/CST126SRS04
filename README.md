@@ -2,14 +2,20 @@
 Women In Computing Linked List  
 
 
-Class ID: 
+Class ID: Staryu
 
 SRS ID: CST126SRS04  
 
 Unresolved Issues:  
 
 Notes:  
-
+Sources used for 10 women pioneers in computer science - 
+	www.women.cs.cmu.edu/ada/Resources/Women/
+	www.steveshirley.com
+	www.jewishvirtuallibrary.org/kira-radinsky
+Tutorial tools used - 
+	www.codementor.io/codementorteam/a-comprehensive-guideo-to-implementation-of-singly-linked-list-using-c_plus_plus-ondlm5azr
+	Powerpoint presentation provided by Mitch Besser, titled SLL Reverse Algorithm 
 ---
 
 Purpose:  
