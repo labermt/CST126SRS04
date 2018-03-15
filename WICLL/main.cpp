@@ -60,16 +60,16 @@ void deleteList(Node* head)
 
 int main()
 {
-	CSWoman* woman1 = new CSWoman("Ada Lovelace", 1950, "shES COOL");
-	CSWoman* woman2 = new CSWoman("Edith Clarke", 1988, "gghghhghg");
-	CSWoman* woman3 = new CSWoman("Women of ENIAC", 1988, "gghghhghg");
-	CSWoman* woman4 = new CSWoman("Grace Hopper", 1988, "gghghhghg");
-	CSWoman* woman5 = new CSWoman("Evelyn Boyd Granville", 1988, "gghghhghg");
-	CSWoman* woman6 = new CSWoman("Sister Mary Kenneth Keller", 1988, "gghghhghg");
-	CSWoman* woman7 = new CSWoman("Susan Kare", 1988, "gghghhghg");
-	CSWoman* woman8 = new CSWoman("Carol Shaw", 1988, "gghghhghg");
-	CSWoman* woman9 = new CSWoman("Janese Swanson", 1988, "gghghhghg");
-	CSWoman* woman10 = new CSWoman("Radia Perlman", 1988, "gghghhghg");
+	CSWoman* woman1 = new CSWoman("Ada Lovelace", 1815, "prophet of computer age");
+	CSWoman* woman2 = new CSWoman("Edith Clarke", 1883, "takes charge");
+	CSWoman* woman3 = new CSWoman("Women of ENIAC", 1946, "pioneers");
+	CSWoman* woman4 = new CSWoman("Grace Hopper", 1906, "queen of software");
+	CSWoman* woman5 = new CSWoman("Evelyn Boyd Granville", 1924, "Race,space, and advocacy");
+	CSWoman* woman6 = new CSWoman("Sister Mary Kenneth Keller", 1913, "First female computer science PhD");
+	CSWoman* woman7 = new CSWoman("Susan Kare", 1954, "Apple Icon");
+	CSWoman* woman8 = new CSWoman("Carol Shaw", 1955, "Atari Game Developer");
+	CSWoman* woman9 = new CSWoman("Janese Swanson", 1958, "Likes pink");
+	CSWoman* woman10 = new CSWoman("Radia Perlman", 1951, "Mother of the internet");
 
 	Node* head = new Node();
 
