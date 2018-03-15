@@ -2,11 +2,11 @@
 Women In Computing Linked List  
 
 
-Class ID: 
+Class ID: Spheal
 
-SRS ID: CST126SRS04  
+SRS ID: CST126SRS04
 
-Unresolved Issues:  
+Unresolved Issues:
 
 Notes:  
 
