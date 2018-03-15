@@ -23,14 +23,18 @@ int main()
 	LinkedList* const listOfWomen = new LinkedList();
 	for (int i = 0; i < ARRAY_SIZE(womanArray); i++)
 	{
-		listOfWomen->add(womanArray[i]);
+		if(womanArray[i] != nullptr && listOfWomen != nullptr)
+			listOfWomen->add(womanArray[i]);
 	}
 
 	//print, reverse, and print again
-	listOfWomen->printList();
-	listOfWomen->reverse();
-	listOfWomen->printList();
-	listOfWomen->clearList();
+	if (listOfWomen != nullptr)
+	{
+		listOfWomen->printList();
+		listOfWomen->reverse();
+		listOfWomen->printList();
+		listOfWomen->clearList();
+	}
 
 	//clean up heap
 	for (int i = 0; i < ARRAY_SIZE(womanArray); i++)
