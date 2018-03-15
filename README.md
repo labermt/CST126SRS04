@@ -2,13 +2,13 @@
 Women In Computing Linked List  
 
 
-Class ID: 
+Class ID: Sliggoo
 
 SRS ID: CST126SRS04  
 
 Unresolved Issues:  
 
-Notes:  
+Notes:  Everything should work perfect. 
 
 ---
 
