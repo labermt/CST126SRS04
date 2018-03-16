@@ -2,12 +2,12 @@
 Women In Computing Linked List  
 
 
-Class ID: 
+Class ID: Hippopotus
 
 SRS ID: CST126SRS04  
 
 Unresolved Issues:  
-
+Error
 Notes:  
 
 ---
