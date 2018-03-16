@@ -8,7 +8,8 @@ SRS ID: CST126SRS04
 
 Unresolved Issues:  
 
-Notes:  
+Notes:  Citing sources for facts https://insights.dice.com/2016/03/14/10-famous-women-in-tech-history/, 
+		and https://en.wikipedia.org/wiki/Women_in_computing
 
 ---
 

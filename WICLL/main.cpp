@@ -1,8 +1,9 @@
 ﻿#include "stdafx.h"
-#include "CSWoman.h"
-#include "link_list.h"
 #include <iostream>
 #include <iomanip>
+#include "CSWoman.h"
+#include "link_list.h"
+
 
 
 int main()

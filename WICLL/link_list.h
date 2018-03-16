@@ -1,7 +1,6 @@
 #pragma once
-#include "CSWoman.h"
 #include <ostream>
-
+#include "CSWoman.h"
 
 class link_list
 {
