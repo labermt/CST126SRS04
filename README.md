@@ -7,8 +7,12 @@ Class ID: Ninetales
 SRS ID: CST126SRS04  
 
 Unresolved Issues:  
+Cannot find any unresolved issues? 
 
-Notes:  
+Notes:
+Have a great day! These are the websites I used for the facts: 
+- [10 Famous Women in Tech History](https://insights.dice.com/2016/03/14/10-famous-women-in-tech-history/)
+- [Wikipedia: Women In Computing](https://en.wikipedia.org/wiki/Women_in_computing)
 
 ---
 
