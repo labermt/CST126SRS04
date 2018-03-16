@@ -8,7 +8,10 @@ SRS ID: CST126SRS04
 
 Unresolved Issues:  
 
-Notes:  
+Notes: Just wanted to keep all the new and delete operators in the same file for clarity so I chose the main.cpp file.
+I now recognize I could have just passed in values of CSWomen to the add() function instead of CSWoman pointers.
+So all the new and delete statements could have been in the LinkedList instead. May have been a cleaner solution.
+Still learning how to deal with pointers :)
 
 ---
 

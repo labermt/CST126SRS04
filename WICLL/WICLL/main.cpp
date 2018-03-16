@@ -6,6 +6,7 @@
 
 int main()
 {
+	//Initial data
 	const CSWoman * const womanArray[] = {
 		new CSWoman("Ada Lovelace", 1815, "First computer programmer ever."),
 		new CSWoman("Grete Hermann", 1901, "Wrote book on computerized algebra."),
