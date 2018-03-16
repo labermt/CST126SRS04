@@ -22,7 +22,7 @@ string CSWoman::get_fact_()
 	return fact_;
 }
 
-void CSWoman::PrintCSWoman(char Person) const
+void CSWoman::PrintCSWoman() const
 {
 	cout << "Person:  " << get_name_ << endl;
 	cout << "Birth Year:  " << get_birthYear_ << endl;

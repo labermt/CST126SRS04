@@ -1,15 +1,13 @@
 #pragma once
 #include "CSWoman.h"
-//slinked list (reverse)
-//slinked list print
-//node print
-// node add
+#ifndef _SLL_H_
 class SLinkList
 {
 private:
 typedef class Node
 	{
 	friend SLinkList;
+	friend CSWoman;
 	private:
 		Node* next_;
 		const CSWoman data_;
@@ -22,7 +20,7 @@ typedef class Node
 	nodePtr temp = nullptr;
 
 public:
-
+	friend CSWoman;
 	void NodeCreation(CSWoman* PeopleData);
 	void NodeInsertion(Node MyCSWomen);
 	void NodeListPrint(char PrintData);
@@ -30,3 +28,4 @@ public:
 	void DeleteNode(char DeleteData);
 	void PrintReverse(char ReversePrint);
 };
+#endif

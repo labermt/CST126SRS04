@@ -40,16 +40,17 @@ int main()
 	const auto(Person17) = new CSWoman("Carl Sassenrath", 1957, "Created Amiga computer operating system Kernel.");
 	People_list.NodeCreation(Person17);
 
-	SLinkList::NodeListPrint();	{
-		cout << People_list << endl;
-	};
-	SLinkList::NodeListReverse(People_list);
-	SLinkList::NodeListPrint()
+	CSWoman.PrintCSWoman();
 	{
 		cout << People_list << endl;
 	};
-	SLinkList::DeleteNode(People_list);
-
+	SLinkList.NodeListReverse();
+	CSWoman.PrintCSWoman();
+	{
+		cout << People_list << endl;
+	};
+	SLinkList.DeleteNode();
+	
     return 0;
 }
 

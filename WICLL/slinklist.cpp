@@ -5,6 +5,7 @@
 
 using namespace std;
 
+class CSWoman;
 void SLinkList::NodeCreation(CSWoman* PeopleData)
 {
 	nodePtr first = new Node(); 
@@ -25,15 +26,6 @@ void SLinkList::NodeCreation(CSWoman* PeopleData)
 		head = PeopleData;
 	};
 };
-void SLinkList::NodeListPrint(char PrintData)
-{
-	tail = head;
-	while (tail != nullptr)
-	{
-		cout << tail->data_ << endl;
-		tail = tail->next_;
-	}
-};
 void SLinkList::NodeListReverse(Node head)
 {
   nodePtr prev{ nullptr };
@@ -47,7 +39,6 @@ void SLinkList::NodeListReverse(Node head)
 	}
 	head = prev;
 }
-void SLinkList::PrintReverse(char ReversePrint);
 void SLinkList::DeleteNode(char DeleteData)
 {
 	nodePtr DPtr = nullptr;
