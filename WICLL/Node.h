@@ -5,12 +5,13 @@ class Node
 {
 private:
 	Node* next_;
-	const CSWoman* const woman_;
+	const CSWoman* woman_;
 
 public:
-	Node(Node* const next, const CSWoman* const woman);
+	Node(Node* const next);
 
 	Node* getNext() const;
 	void setNext(Node* const next);
 	const CSWoman* getWoman() const;
+	void setWoman(const CSWoman* const woman);
 };

@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "Node.h"
 
-Node::Node(Node* const next, const CSWoman* const woman) :
+Node::Node(Node* const next) :
 	next_{ next },
-	woman_{ woman }
+	woman_{ nullptr }
 {
 
 }
@@ -22,4 +22,9 @@ void Node::setNext(Node* const next)
 const CSWoman* Node::getWoman() const
 {
 	return woman_;
+}
+
+void Node::setWoman(const CSWoman* const woman)
+{
+	woman_ = woman;
 }
