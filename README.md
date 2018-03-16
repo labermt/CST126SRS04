@@ -9,7 +9,9 @@ SRS ID: CST126SRS04
 Unresolved Issues:  
 
 Notes:  
-Sources used for 10 women pioneers in computer science - 
+Sources used for 15 women and 2 men (After speaking with Mitch, he expressed that 
+this would be an alright change because it would paints a better picture of our current
+situation) pioneers in computer science - 
 	www.women.cs.cmu.edu/ada/Resources/Women/
 	www.steveshirley.com
 	www.jewishvirtuallibrary.org/kira-radinsky
