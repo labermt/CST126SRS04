@@ -131,9 +131,4 @@ int main()
 
 
 
-	//display(head);
-
-	//	"Ada Lovelace" "Edith Clarke" "Women of ENIAC" "Grace Hopper" "Evelyn Boyd Granville"
-	//	"Sister Mary Kenneth Keller" "Susan Kare" "Carol Shaw" "Janese Swanson" "Radia Perlman"
-
 	
