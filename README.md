@@ -8,7 +8,9 @@ SRS ID: CST126SRS04
 
 Unresolved Issues:  
 
-Notes:  Why is resharper complaining about my CSWomen getters returning const, but not for my linkedlist getters?
+Notes:  
+Information on women obtained from [Wikipedia: Women In Computing](https://en.wikipedia.org/wiki/Women_in_computing)
+
 ---
 
 Purpose:  

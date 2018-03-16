@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include "LinkedList.h"
 #include <iostream>
+#include "LinkedList.h"
 
 LinkedList::Node::Node(Node* next, CSWoman* data):
 	next_{next}, 

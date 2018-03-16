@@ -2,9 +2,9 @@
 //
 
 #include "stdafx.h"
+#include <iostream>
 #include "CSWomen.h"
 #include "LinkedList.h"
-#include <iostream>
 
 int main()
 {
