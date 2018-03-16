@@ -8,17 +8,17 @@ CSWoman::CSWoman(const char* const name, const unsigned birthYear, const char* c
 {
 }
 
-const std::string CSWoman::getName() const
+std::string CSWoman::getName() const
 {
 	return name_;
 }
 
-const unsigned CSWoman::getYear() const
+unsigned CSWoman::getYear() const
 {
 	return birthYear_;
 }
 
-const std::string CSWoman::getFact() const
+std::string CSWoman::getFact() const
 {
 	return fact_;
 }

@@ -21,7 +21,7 @@ public:
 
 	public:
 		const CSWoman* getData() const;
-		const Node* getNext() const;
+		Node* getNext() const;
 	};
 
 private:
@@ -31,7 +31,7 @@ public:
 	~LinkedList();
 
 public:
-	const Node* getHead() const;
+	Node* getHead() const;
 	void addToList(CSWoman* const woman);
 	void reverse();
 }; 

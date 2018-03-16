@@ -19,7 +19,7 @@ const CSWoman* LinkedList::Node::getData() const
 	return Node::data_;
 }
 
-const LinkedList::Node* LinkedList::Node::getNext() const
+LinkedList::Node* LinkedList::Node::getNext() const
 {
 	return next_;
 }
@@ -29,7 +29,7 @@ LinkedList::~LinkedList()
 	delete head_;
 }
 
-const LinkedList::Node* LinkedList::getHead() const
+LinkedList::Node* LinkedList::getHead() const
 {
 	return head_;
 }
