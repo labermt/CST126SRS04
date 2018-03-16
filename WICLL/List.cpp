@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include "List.h"
 #include <iostream>
+#include "List.h"
 
 // Class methods
 List::List() :
