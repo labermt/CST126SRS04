@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WICLL", "WICLL\WICLL.vcxproj", "{A4334529-1352-4B72-90AB-E90C8D613CC9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WICLL", "WICLL.vcxproj", "{A4334529-1352-4B72-90AB-E90C8D613CC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9C0BBB47-5AD9-4010-9057-C40A25FB4EB6}
+		SolutionGuid = {177640FB-A540-4672-87A7-B8E2FD077A46}
 	EndGlobalSection
 EndGlobal
