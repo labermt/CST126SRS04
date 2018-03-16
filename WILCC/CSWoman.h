@@ -12,8 +12,8 @@ private:
 public:
 	CSWoman(const char* const name, const unsigned birthYear, const char* const fact);
 
-	std::string getname();
-	std::string getfact();
-	unsigned getbirthyear();
+	std::string getname() const;
+	std::string getfact() const;
+	unsigned getbirthyear() const;
 	void printInfo();
 };

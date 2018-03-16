@@ -6,6 +6,11 @@
 node::node(const CSWoman data) : myinfo_{ new CSWoman{data} }
 { }
 
+node::~node()
+{
+	delete myinfo_;
+}
+
 CSWoman node::getinfo() const
 {
 	return *myinfo_;
@@ -19,11 +24,6 @@ node * node::getnext() const
 void node::setnext(node* data)
 {
 	next_ = data ;
-}
-
-void node::printmyinfo()
-{
-	//myinfo_->printInfo;
 }
 
 void list::addfunc(CSWoman data)
@@ -42,5 +42,42 @@ void list::printlist()
 		auto cswoman{ current->getinfo() };
 		cswoman.printInfo();
 		current = current->getnext();
+	}
+}
+
+void list::reverselist()
+{
+	node * current{ head_ };
+	node * next{ nullptr };
+	node * previous{ head_ };
+	if (current->getnext() != nullptr)
+	{
+		current = current->getnext();
+		while (current->getnext() != nullptr)
+		{
+			next = current->getnext();
+			current->setnext(previous);
+			previous = current;
+			current = next;
+		}
+		current->setnext(previous);
+		head_->setnext(nullptr);
+		head_ = current;
+	}
+}
+
+void list::deletelist()
+{
+	if (head_ != nullptr)
+	{
+		node * next = head_->getnext();
+		while (head_->getnext() != nullptr)
+		{
+			delete head_;
+			head_ = next;
+			next = head_->getnext();
+		}
+		delete head_;
+		head_ = nullptr;
 	}
 }

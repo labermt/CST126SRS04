@@ -10,10 +10,11 @@ private:
 
 public:
 	explicit node(const CSWoman data);
+	~node();
+
 	CSWoman getinfo() const;
 	node* getnext() const;
 	void setnext(node* data);
-	void printmyinfo();
 };
 
 class list
@@ -24,4 +25,6 @@ private:
 public:
 	void addfunc(CSWoman data);
 	void printlist();
+	void reverselist();
+	void deletelist();
 };
