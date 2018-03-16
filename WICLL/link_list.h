@@ -1,8 +1,7 @@
 #pragma once
-#include "cs_woman.h"
+#include "CSWoman.h"
 #include <ostream>
 
-class cs_woman;
 
 class link_list
 {
@@ -13,13 +12,13 @@ public:
 
 	private:
 		node* next_;
-		cs_woman* data_;
+		const CSWoman* data_;
 
 	public:
-		const cs_woman* get_data() const;
-		const node* get_next() const;
+		const CSWoman* get_data() const;
+		node* get_next() const;
 		
-		node(node* next, cs_woman* data);
+		node(node* next, CSWoman* data);
 		~node();
 	};
 
@@ -31,7 +30,7 @@ public:
 
 public:
 	void reverse();
-	void add(cs_woman* const cs_woman);
+	void add(CSWoman* const cs_woman);
 	const node* get_head() const;
 	
 };
