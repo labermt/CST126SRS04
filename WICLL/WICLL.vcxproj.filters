@@ -24,7 +24,7 @@
     <ClInclude Include="CSWoman.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="linklist.h">
+    <ClInclude Include="slinklist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,7 +38,7 @@
     <ClCompile Include="CSWoman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="linklist.cpp">
+    <ClCompile Include="slinklist.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

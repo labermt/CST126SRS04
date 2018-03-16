@@ -15,7 +15,8 @@ Sources used for 10 women pioneers in computer science -
 	www.jewishvirtuallibrary.org/kira-radinsky
 Tutorial tools used - 
 	www.codementor.io/codementorteam/a-comprehensive-guideo-to-implementation-of-singly-linked-list-using-c_plus_plus-ondlm5azr
-	Powerpoint presentation provided by Mitch Besser, titled SLL Reverse Algorithm 
+	Powerpoint presentation provided by Mitch Besser, titled SLL Reverse Algorithm
+	Paul Programming, youtube series "Creating a Linked List Project in C++ Part 1-7"
 ---
 
 Purpose:  

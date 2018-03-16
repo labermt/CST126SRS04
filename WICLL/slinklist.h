@@ -1,41 +1,32 @@
 #pragma once
 #include "CSWoman.h"
-
-class linklist
+//slinked list (reverse)
+//slinked list print
+//node print
+// node add
+class SLinkList
 {
 private:
-	class Node
+typedef class Node
 	{
+	friend SLinkList;
 	private:
-		Node * next_{ nullptr };
-		CSWoman data_;
-	};
-	Node * head{ nullptr };
+		Node* next_;
+		const CSWoman data_;
+	public: 
+		Node(Node* next_, CSWoman* data_);
+	}* nodePtr;
+
+	nodePtr head = nullptr;
+	nodePtr tail = nullptr;
+	nodePtr temp = nullptr;
+
 public:
-	void nodeCreation(int value)
-	{
-		Node* interimPtr = new Node;
-		interimPtr->CSWomen = value;
-		interimPtr->next = nullptr;
-		if (head==nullptr)
-		{
-			head = interimPtr;
-			tail = interimPtr;
-			interimPtr = nullptr;
-		}
-	}
-public:
-	void reverse{ Node* head }
-	{
-		Node*prev{ nullptr };
-		auto curr{ head };
-		while (curr!= nullptr);
-		{
-			const auto next = curr->next_;
-			curr->next_ = prev;
-			prev = curr;
-			curr = next;
-		}
-		head = prev;
-	};
+
+	void NodeCreation(CSWoman* PeopleData);
+	void NodeInsertion(Node MyCSWomen);
+	void NodeListPrint(char PrintData);
+	void NodeListReverse(Node head);
+	void DeleteNode(char DeleteData);
+	void PrintReverse(char ReversePrint);
 };
