@@ -1,7 +1,7 @@
 #pragma once
 
 #include "stdafx.h"
-#include "LinkedList.h"
+#include "linkedlist.h"
 #include "CSWomen.h"
 
 class LinkedList
