@@ -25,7 +25,7 @@ void link_list::reverse()
 	head_ = prev;
 }
 
-void link_list::add(CSWoman* const cs_woman)
+void link_list::add(const CSWoman* const cs_woman)
 {
 	auto const new_node = new node(head_, cs_woman);
 	head_ = new_node;
@@ -37,7 +37,7 @@ const link_list::node* link_list::get_head() const
 	return head_;
 }
 
-link_list::node::node(node* next,  CSWoman* data):
+link_list::node::node(node* next, const CSWoman* const data):
 	next_{next}, data_{data}
 {
 

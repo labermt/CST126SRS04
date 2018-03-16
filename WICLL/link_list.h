@@ -17,7 +17,7 @@ public:
 		const CSWoman* get_data() const;
 		node* get_next() const;
 		
-		node(node* next, CSWoman* data);
+		node(node* next, const CSWoman* const data);
 		~node();
 	};
 
@@ -29,7 +29,7 @@ public:
 
 public:
 	void reverse();
-	void add(CSWoman* const cs_woman);
+	void add(const CSWoman* const cs_woman);
 	const node* get_head() const;
 	
 };
