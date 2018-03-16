@@ -16,7 +16,7 @@ public:
 		const CSWoman* const data_;
 
 	public:
-		Node(Node* next, CSWoman* data);
+		Node(Node* next,const CSWoman* const data);
 		~Node();
 
 	public:
@@ -32,7 +32,7 @@ public:
 
 public:
 	Node* getHead() const;
-	void addToList(CSWoman* const woman);
+	void addToList(const CSWoman* const woman);
 	void reverse();
 }; 
 

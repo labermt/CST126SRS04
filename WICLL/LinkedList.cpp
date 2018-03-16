@@ -2,7 +2,7 @@
 #include <iostream>
 #include "linkedlist.h"
 
-LinkedList::Node::Node(Node* next, CSWoman* data):
+LinkedList::Node::Node(Node* next,const CSWoman* const data):
 	next_{next}, 
 	data_{data}
 {
@@ -34,7 +34,7 @@ LinkedList::Node* LinkedList::getHead() const
 	return head_;
 }
 
-void LinkedList::addToList(CSWoman* const woman)
+void LinkedList::addToList(const CSWoman* const woman)
 {
 	auto const first = new Node(head_, woman);
 	head_ = first;

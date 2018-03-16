@@ -8,16 +8,16 @@
 
 int main()
 {
-	const auto woman1 = new CSWoman("Ada Lovelace", 1815, "Ada is considered the first computer programmer.");
-	const auto woman2 = new CSWoman("Grete Hermann", 1901, "Grete created the foundations of computational algebra.");
-	const auto woman3 = new CSWoman("Grace Hopper", 1906, "Grace created COBOL and the first compiler.");
-	const auto woman4 = new CSWoman("Ida Rhodes", 1900, "Ida co-designed the C-10 language for the UNIVAC 1 computer.");
-	const auto woman5 = new CSWoman("Dana Ulery", 1938, "Dana was the first female enngineer at the US JPL.");
-	const auto woman6 = new CSWoman("Mary Wilkes", 1937, "Mary was the first developer of LAP, the operating system for the first minicomputer.");
-	const auto woman7 = new CSWoman("Margaret R. Fox", 1916, "Margaret served as the first Secretary for the AFIPS.");
-	const auto woman8 = new CSWoman("Margaret Hamilton", 1936, "Margaret helped develop the onboard flight software for Apollo 11.");
-	const auto woman9 = new CSWoman("Patricia Selinger", 1949, "Patricia was a key author of IBM System R, and an IBM Fellow.");
-	const auto woman10 = new CSWoman("Marissa Mayer", 1975, "Marissa was the first female engineer at Google.");
+	auto const woman1 = new const CSWoman("Ada Lovelace", 1815, "Ada is considered the first computer programmer.");
+	auto const woman2 = new const CSWoman("Grete Hermann", 1901, "Grete created the foundations of computational algebra.");
+	auto const woman3 = new const CSWoman("Grace Hopper", 1906, "Grace created COBOL and the first compiler.");
+	auto const woman4 = new const CSWoman("Ida Rhodes", 1900, "Ida co-designed the C-10 language for the UNIVAC 1 computer.");
+	auto const woman5 = new const CSWoman("Dana Ulery", 1938, "Dana was the first female enngineer at the US JPL.");
+	auto const woman6 = new const CSWoman("Mary Wilkes", 1937, "Mary was the first developer of LAP, the operating system for the first minicomputer.");
+	auto const woman7 = new const CSWoman("Margaret R. Fox", 1916, "Margaret served as the first Secretary for the AFIPS.");
+	auto const woman8 = new const CSWoman("Margaret Hamilton", 1936, "Margaret helped develop the onboard flight software for Apollo 11.");
+	auto const woman9 = new const CSWoman("Patricia Selinger", 1949, "Patricia was a key author of IBM System R, and an IBM Fellow.");
+	auto const woman10 = new const CSWoman("Marissa Mayer", 1975, "Marissa was the first female engineer at Google.");
 
 	LinkedList women;
 	women.addToList(woman1);
