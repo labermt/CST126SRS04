@@ -12,4 +12,6 @@ void linkedList::nodes(CSWoman* file)
 		newNode->data_ = file;
 		newNode->next_ = head_;
 	}
+	//cout data
+	delete Node;
 };
