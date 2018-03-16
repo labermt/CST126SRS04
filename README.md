@@ -6,9 +6,9 @@ Class ID: Phantump
 
 SRS ID: CST126SRS04  
 
-Unresolved Issues:  
+Unresolved Issues: 
 
-Notes:  
+Notes: 
 
 ---
 

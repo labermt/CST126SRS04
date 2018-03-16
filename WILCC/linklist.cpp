@@ -1,9 +1,8 @@
 #include "stdafx.h"
-#include <iostream>
 #include <cassert>
 #include "linklist.h"
 
-node::node(const CSWoman data) : myinfo_{ new CSWoman{data} }
+node::node(const CSWoman * data) : myinfo_{ data }
 { }
 
 node::~node()
@@ -26,12 +25,14 @@ void node::setnext(node* data)
 	next_ = data ;
 }
 
-void list::addfunc(CSWoman data)
+void list::addfunc(const CSWoman * data)
 {
-	auto filler = new node { data };
-	assert(filler != nullptr);
-	filler->setnext(head_);
-	head_ = filler;
+	auto filler = new node{ data };
+	if (filler != nullptr);
+	{
+		filler->setnext(head_);
+		head_ = filler;
+	}
 }
 
 void list::printlist()

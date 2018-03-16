@@ -9,7 +9,7 @@ private:
 	node * next_{nullptr};
 
 public:
-	explicit node(const CSWoman data);
+	explicit node(const CSWoman * data);
 	~node();
 
 	CSWoman getinfo() const;
@@ -23,7 +23,7 @@ private:
 	node * head_{};
 
 public:
-	void addfunc(CSWoman data);
+	void addfunc(const CSWoman * data);
 	void printlist();
 	void reverselist();
 	void deletelist();
