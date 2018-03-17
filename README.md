@@ -2,11 +2,11 @@
 Women In Computing Linked List  
 
 
-Class ID: 
+Class ID: Inkay
 
 SRS ID: CST126SRS04  
 
-Unresolved Issues:  
+Unresolved Issues: Does not run, some error on linklist.cpp.
 
 Notes:  
 
