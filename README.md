@@ -2,13 +2,17 @@
 Women In Computing Linked List  
 
 
-Class ID: 
+Class ID: Drilbur  
 
 SRS ID: CST126SRS04  
 
 Unresolved Issues:  
 
-Notes:  
+Notes: Compiled with Visual Studio 2017 on Windows 10.  
+
+Sources: 
+	- https://insights.dice.com/2016/03/14/10-famous-women-in-tech-history/
+	- https://en.wikipedia.org/wiki/Women_in_computing
 
 ---
 
