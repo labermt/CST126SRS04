@@ -2,13 +2,18 @@
 Women In Computing Linked List  
 
 
-Class ID: 
+Class ID: Hippopotus
 
 SRS ID: CST126SRS04  
 
 Unresolved Issues:  
-
+Errors in linkedList.cpp where values are undefiend for an unknown reason.
+Data for CSWoman missions, due to issues with formatiing the data.
+Data does not display in any order.
+Unable to test for const correctness due to the errors in linkedList.cpp
 Notes:  
+I missheard on Thursday and thought the assignment was due on Friday, giving me the day off to work on it.
+I did not check the calendar to dubble check. I know this does not change anything I just want you to know the situation so you do not judge me negatively.
 
 ---
 
