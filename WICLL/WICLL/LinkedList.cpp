@@ -4,7 +4,7 @@
 
 void LinkedList::reverse()
 {
-	//Code based on Mitch's slides
+	// Code based on Mitch's slides
 	Node* prev{ nullptr };
 	auto curr{ m_head };
 	while (curr != nullptr)
@@ -41,32 +41,33 @@ void LinkedList::printList()
 
 void LinkedList::add(const CSWoman * const woman)
 {
-	if (m_head == nullptr) {
-		//init list
-		m_head = new Node(nullptr, *woman);
-		node = m_head;
-		temp_node = m_head;
-	}
-	else {
-		//add node
-		node = new Node(nullptr, *woman);
-		temp_node->next_ = node;
-		temp_node = node;
-	}
+	m_head = new Node(m_head, *woman);
+	//if (m_head == nullptr) {
+	//	//init list
+	//	m_head = new Node(nullptr, *woman);
+	//	node = m_head;
+	//	temp_node = m_head;
+	//}
+	//else {
+	//	//add node
+	//	node = new Node(nullptr, *woman);
+	//	temp_node->next_ = node;
+	//	temp_node = node;
+	//}
 }
 
-//Ctors and Dtors
+// Ctors and Dtors
 Node::Node(Node * next, const CSWoman& woman)
-	:next_{next}, woman_{woman}
+	: next_{next}, woman_{woman}
 {
 }
 
-Node::~Node()
-{
-}
+//Node::~Node()
+//{
+//}
 
 LinkedList::LinkedList() :m_head{ nullptr }
 {
 }
 
-LinkedList::~LinkedList() {}
+// LinkedList::~LinkedList() {} // If a dtor doesn't do anything, the default is preferred. 

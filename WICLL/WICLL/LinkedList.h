@@ -9,22 +9,21 @@ public:
 	const CSWoman woman_;
 
 	Node(Node* next, const CSWoman& woman);
-	~Node();
+	// ~Node() = default;
 };
 
 class LinkedList
 {
 private:
 	Node * m_head;
-	Node * temp_node;
-	Node * node;
+	// Node * temp_node; // ?
+	// Node * node; // ?
 
 public:
 	LinkedList();
-	~LinkedList();
+	// ~LinkedList() = default;
 	void reverse();
 	void clearList();
 	void printList();
 	void add(const CSWoman* const woman);
 };
-

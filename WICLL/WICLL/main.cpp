@@ -2,11 +2,17 @@
 #include "CSWoman.h"
 #include "LinkedList.h"
 
+#ifndef _NDEBUG
+#	define _CRTDBG_MAP_ALLOC
+#	include <stdlib.h>
+#	include <crtdbg.h>
+#endif
+
 #define ARRAY_SIZE(array) (sizeof((array))/sizeof((array[0])))
 
 int main()
 {
-	//Initial data
+	// Initial data // Whitespace after // improves readability. 
 	const CSWoman * const womanArray[] = {
 		new CSWoman("Ada Lovelace", 1815, "First computer programmer ever."),
 		new CSWoman("Grete Hermann", 1901, "Wrote book on computerized algebra."),
@@ -20,15 +26,17 @@ int main()
 		new CSWoman("Melanie Rieback", 1978, "Programmed the first virus to infect RFID devices.")
 	};
 	
-	//Create linkedlist of 10 programming women
+	// Create linkedlist of 10 programming women
 	LinkedList* const listOfWomen = new LinkedList();
 	for (int i = 0; i < ARRAY_SIZE(womanArray); i++)
 	{
-		if(womanArray[i] != nullptr && listOfWomen != nullptr)
+		if (womanArray[i] != nullptr && listOfWomen != nullptr)
+		{
 			listOfWomen->add(womanArray[i]);
+		}
 	}
 
-	//print, reverse, and print again
+	// print, reverse, and print again
 	if (listOfWomen != nullptr)
 	{
 		listOfWomen->printList();
@@ -37,12 +45,16 @@ int main()
 		listOfWomen->clearList();
 	}
 
-	//clean up heap
+	// clean up heap
 	for (int i = 0; i < ARRAY_SIZE(womanArray); i++)
 	{
 		delete womanArray[i];
 	}
 	delete listOfWomen;
+
+#ifndef _NDEBUG
+	_CrtDumpMemoryLeaks();
+#endif
 
 	return 0;
 }
