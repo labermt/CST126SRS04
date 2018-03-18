@@ -4,8 +4,9 @@ class CSWoman;
 
 struct listNode
 {
-	CSWoman* woman_;
+	const CSWoman* const woman_;
 	listNode* next_;
 
+	listNode(const CSWoman* const woman);
 	~listNode();
 };
