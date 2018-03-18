@@ -47,7 +47,7 @@ void display(Node* head)
 
 	while (curr != nullptr) 
 	{
-		curr->data->print();
+		curr->data->print(); // What if data==nullptr? 
 		curr = curr->next;
 	}
 }
