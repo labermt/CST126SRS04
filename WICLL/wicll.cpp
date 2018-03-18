@@ -14,22 +14,22 @@ CSWoman::CSWoman()
 }
 
 void CSWoman::addNode(const string name, const unsigned year, const string fact) 
-	{
-	auto n = new node;  //create a new node pointer called n and creating new node. new poitner points to that.
+{
+	auto n = new node;  // create a new node pointer called n and creating new node. new poitner points to that.
 	n->next = nullptr;
 	n->name = name;
 	n->birth_year = year;
 	n->fact = fact;
 
 
-	//if there is already a list
+	// if there is already a list
 	if (head_ != nullptr) 
-		{
+	{
 		curr_ = head_;
-		//check to see if it is the last node in the list
+		// check to see if it is the last node in the list
 		while (curr_->next != nullptr) 
 		{
-			curr_ = curr_->next; //current pointer points to next until its last node in the list
+			curr_ = curr_->next; // current pointer points to next until its last node in the list
 		}
 		curr_->next = n;
 	}
@@ -39,18 +39,19 @@ void CSWoman::addNode(const string name, const unsigned year, const string fact)
 	}
 }
 
-//pass in data and stored in delData
-//walk through list until we come across node with value = delData
-//delete that node and patch up list
+// A space between // and the text helps readability. 
+// pass in data and stored in delData
+// walk through list until we come across node with value = delData
+// delete that node and patch up list
 
 void CSWoman::deleteNode(string del_name) 
-	{
+{
 	nodePtr delPtr = nullptr;
 	temp_ = head_;
 	curr_ = head_;
 
-	//check to see if curr node is the one we want to delete.
-	//temp will trail curr so we can patch node
+	// check to see if curr node is the one we want to delete.
+	// temp will trail curr so we can patch node
 
 	while (curr_ != nullptr && curr_->name != del_name)
 	{
@@ -65,8 +66,8 @@ void CSWoman::deleteNode(string del_name)
 	else
 	{
 		delPtr = curr_;
-		curr_ = curr_->next; //advances curr to next node
-		temp_->next = curr_; //patches the the hole in the list
+		curr_ = curr_->next; // advances curr to next node
+		temp_->next = curr_; // patches the the hole in the list
 		if (delPtr == head_)
 		{
 			head_ = head_->next;
@@ -74,7 +75,6 @@ void CSWoman::deleteNode(string del_name)
 		}
 		delete delPtr;
 		cout << "The person, " << del_name << ", was removed from the list.\n" << endl;;
-
 	}
 }
 
@@ -92,10 +92,9 @@ void CSWoman::reverseList()
 		head_ = prev;
 	}
 
-
 void CSWoman::printList()
 {
-	curr_= head_;
+	curr_ = head_;
 	while (curr_ != nullptr)
 	{
 		cout << "Name: " << curr_->name << endl;
@@ -104,4 +103,3 @@ void CSWoman::printList()
 		curr_ = curr_->next;
 	}
 }
-
