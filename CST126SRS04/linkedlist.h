@@ -1,4 +1,5 @@
 #pragma once 
+
 #include "stdafx.h"
 #include "CSWoman.h"
 #include "linkedlist.h"
@@ -14,15 +15,19 @@ public:
 	private: 
 		node * next_;
 		CSWoman const & data_;
+
 	public:
-		~node(); 
+		~node();
+
 	public:
 		node(node * next, CSWoman const & data);
 		CSWoman const & getData() const; 
 		const node* getNext() const; 
 	};
+
 public:
 	~linkedlist();
+
 private:
 	node* head_{ nullptr };
 
@@ -31,4 +36,5 @@ public:
 	void reverse();
 	const node* getHead() const;
 };
+
 std::ostream& operator<<(std::ostream&, linkedlist const &);

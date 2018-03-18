@@ -6,10 +6,13 @@
 #include "linkedlist.h"
 #include <iostream>
 
-#define _CRTDBG_MAP_ALLOC
-#include <cstdlib>
-#include <crtdbg.h>
-//I would be lost without Mitch for this assignment. Thank you 
+#ifndef _NDEBUG
+#	define _CRTDBG_MAP_ALLOC
+#	include <stdlib.h>
+#	include <crtdbg.h>
+#endif
+
+// I would be lost without Mitch for this assignment. Thank you // You're welcome! :-)
 int main()
 {
 	auto const woman0{ new const CSWoman("Radia Perlman", 1951, "Grew up in NJ\n") };
@@ -50,12 +53,15 @@ int main()
 		ll.add(*woman9);
 
 		std::cout << ll << std::endl;
-		std::cout << "**Reverse Order**\n\n" << std::endl; 
 		ll.reverse();
+		std::cout << "**Reverse Order**\n\n" << std::endl; // Keeping I/O together. 
 		std::cout << ll << std::endl;
 	} 
+
+#ifndef _NDEBUG
 	_CrtDumpMemoryLeaks();
-	system("pause");
+#endif
+
+	// system("pause");
     return 0;
 };
-
