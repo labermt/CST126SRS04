@@ -3,6 +3,6 @@
 
 struct Node
 {
-	CSWoman * data;
+	const CSWoman * data;
 	Node * next;
 };

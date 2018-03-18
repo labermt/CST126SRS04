@@ -12,7 +12,7 @@ class CSWoman
 	public:
 		CSWoman(const char* const name, const unsigned birthYear, const char* const fact) : name_(name), birthYear_(birthYear), fact_(fact) {};
 
-		void print()
+		void print() const
 		{
 			std::cout << "CSWoman: " << std::endl;
 			std::cout << "\tName: " << name_ << std::endl;

@@ -2,9 +2,16 @@
 #include <iostream>
 using namespace std;
 
-void AppendNode(CSWoman* woman, Node* head) 
+#ifndef _NDEBUG
+#	define _CRTDBG_MAP_ALLOC
+#	include <stdlib.h>
+#	include <crtdbg.h>
+#endif
+
+void AppendNode(const CSWoman* const woman, Node*& head) 
 {
-	Node* node = new Node();
+	// This looks like it appends to the end. That will take a long time and not recommended. Singly linked lists prefer appending to the front.
+	Node* const node = new Node();
 
 	node->data = woman;
 	node->next = nullptr;
@@ -19,7 +26,7 @@ void AppendNode(CSWoman* woman, Node* head)
 	curr->next = node;
 }
 
-void reverse(Node* &head)
+void reverse(Node * &head)
 {
 	Node* prev{ nullptr };
 	auto curr{ head };
@@ -60,22 +67,23 @@ void deleteList(Node* head)
 
 int main()
 {
-	CSWoman* woman1 = new CSWoman("Ada Lovelace", 1815, "prophet of computer age");
-	CSWoman* woman2 = new CSWoman("Edith Clarke", 1883, "takes charge");
-	CSWoman* woman3 = new CSWoman("Women of ENIAC", 1946, "pioneers");
-	CSWoman* woman4 = new CSWoman("Grace Hopper", 1906, "queen of software");
-	CSWoman* woman5 = new CSWoman("Evelyn Boyd Granville", 1924, "Race,space, and advocacy");
-	CSWoman* woman6 = new CSWoman("Sister Mary Kenneth Keller", 1913, "First female computer science PhD");
-	CSWoman* woman7 = new CSWoman("Susan Kare", 1954, "Apple Icon");
-	CSWoman* woman8 = new CSWoman("Carol Shaw", 1955, "Atari Game Developer");
-	CSWoman* woman9 = new CSWoman("Janese Swanson", 1958, "Likes pink");
-	CSWoman* woman10 = new CSWoman("Radia Perlman", 1951, "Mother of the internet");
+	const CSWoman* const woman1 = new const CSWoman("Ada Lovelace", 1815, "prophet of computer age");
+	const CSWoman* const woman2 = new const CSWoman("Edith Clarke", 1883, "takes charge");
+	const CSWoman* const woman3 = new const CSWoman("Women of ENIAC", 1946, "pioneers");
+	const CSWoman* const woman4 = new const CSWoman("Grace Hopper", 1906, "queen of software");
+	const CSWoman* const woman5 = new const CSWoman("Evelyn Boyd Granville", 1924, "Race,space, and advocacy");
+	const CSWoman* const woman6 = new const CSWoman("Sister Mary Kenneth Keller", 1913, "First female computer science PhD");
+	const CSWoman* const woman7 = new const CSWoman("Susan Kare", 1954, "Apple Icon");
+	const CSWoman* const woman8 = new const CSWoman("Carol Shaw", 1955, "Atari Game Developer");
+	const CSWoman* const woman9 = new const CSWoman("Janese Swanson", 1958, "Likes pink");
+	const CSWoman* const woman10 = new const CSWoman("Radia Perlman", 1951, "Mother of the internet");
 
 	Node* head = new Node();
 
-	head->data = woman1;
+	head->data = woman1; // You should be able to start with an empty list. 
 	head->next = nullptr;
 
+	// AppendNode(woman1, head); // and append to the empty list. 
 	AppendNode(woman2, head);
 	AppendNode(woman3, head);
 	AppendNode(woman4, head);
@@ -97,8 +105,8 @@ int main()
 
 	cout << "\t\tReverse Again?..." << endl << endl;
 
-	reverse(head);
-	display(head);
+	// reverse(head); // Extra output not asked for in specification is a violation of class policy. 
+	// display(head);
 
 	delete woman10;
 	delete woman9;
@@ -113,22 +121,14 @@ int main()
 
 	deleteList(head);
 
-#ifdef _WIN32
-
+#ifndef _NDEBUG // Testing for only WIN32 doesn't test for x64. This will test when debugging. 
 	if (_CrtDumpMemoryLeaks())
 	{
 		cout << "Memory leaks!" << endl;
 	}
-
 #endif
 
-	system("pause");
+	// system("pause"); // No system pause allowed. This disrupts automated testing. 
+
 	return 0;
 }
-
-
-
-
-
-
-	
