@@ -6,11 +6,12 @@
 using namespace std;
 
 class CSWoman;
-void SLinkList::NodeCreation(CSWoman* PeopleData)
+
+void SLinkList::NodeCreation(CSWoman* peopleData)
 {
-	nodePtr first = new Node(); 
+	Node* first = new Node(peopleData); 
 	first->next_ = nullptr;
-	first->data_ = PeopleData;
+	first->data_ = peopleData;
 
 	if (head != nullptr)
 	{
@@ -26,19 +27,21 @@ void SLinkList::NodeCreation(CSWoman* PeopleData)
 		head = PeopleData;
 	};
 };
-void SLinkList::NodeListReverse(Node head)
+
+void SLinkList::NodeListReverse(Node* head)
 {
-  nodePtr prev{ nullptr };
-	auto tail{ head };
-	while (tail != nullptr);
+	Node* prev{ nullptr };
+	auto curr{ head };
+	while (curr != nullptr);
 	{
-		const auto next_ = tail->next_;
-		tail->next_ = prev;
-		prev = tail;
-		tail = next_;
+		const auto next_ = curr->next_;
+		curr->next_ = prev;
+		prev = curr;
+		curr = next_;
 	}
 	head = prev;
 }
+
 void SLinkList::DeleteNode(char DeleteData)
 {
 	nodePtr DPtr = nullptr;
@@ -66,6 +69,4 @@ void SLinkList::DeleteNode(char DeleteData)
 		}
 		delete DPtr;
 	};
-
 };
-

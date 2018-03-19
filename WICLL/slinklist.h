@@ -4,23 +4,19 @@
 class SLinkList
 {
 private:
-typedef class Node
+	class Node
 	{
 	friend SLinkList;
-	friend CSWoman;
 	private:
 		Node* next_;
 		const CSWoman data_;
 	public: 
 		Node(Node* next_, CSWoman* data_);
-	}* nodePtr;
+	};
 
-	nodePtr head = nullptr;
-	nodePtr tail = nullptr;
-	nodePtr temp = nullptr;
+	Node* head = nullptr;
 
 public:
-	friend CSWoman;
 	void NodeCreation(CSWoman* PeopleData);
 	void NodeInsertion(Node MyCSWomen);
 	void NodeListPrint(char PrintData);
