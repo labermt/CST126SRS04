@@ -1,55 +1,29 @@
 #include "stdafx.h"
-
 #include <iostream>
-
-#include "SLL.h"
 #include "Node.h"
+#include "SLL.h"
 
 SLL::SLL():
-	head_{nullptr}, tail_{nullptr}
+	head_{nullptr} //, tail_{nullptr}
 {}
+
 SLL::~SLL()
 {
 	auto * curr = head_;
 
 	while(curr != nullptr)
 	{
-		if (curr == tail_)
-		{
-			delete curr;
-			curr = nullptr;
-			tail_ = nullptr;
-		}
-		else
-		{
-			auto * temp = curr;
-			curr = curr->next_;
-			delete temp;
-		}
+		delete curr;
+		curr = nullptr;
 	}
 
 	head_ = nullptr;
 }
-void SLL::addNode(CSWoman* info)
+void SLL::addNode(CSWoman const * const info)
 {
-	auto * newWoman = new Node;
-
-	if(head_ == nullptr) //Add to Empty List
-	{
-		newWoman->info_ = info;
-		newWoman->next_ = nullptr;
-		head_ = newWoman;
-		tail_ = newWoman;
-	}
-	else //Add to List
-	{
-		auto * temp = new Node;
-		temp->info_ = info;
-		temp->next_ = nullptr;
-		tail_->next_ = temp;
-		tail_ = temp;
-	}
+	head_ = new Node(info, head_);
 }
+
 void SLL::reverseSLL()
 {
 	Node* prev = nullptr;

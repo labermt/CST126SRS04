@@ -4,15 +4,16 @@
 #include "CSWoman.h"
 
 class Node;
+
 class SLL
 {
 private:
-	Node *head_, *tail_;
+	Node * head_;
 
 public:
 	SLL();
 	~SLL();
-	void addNode(CSWoman* info);
+	void addNode(CSWoman const * const info);
 	void reverseSLL();
 	void displaySLL() const;
 };

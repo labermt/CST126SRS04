@@ -8,13 +8,13 @@ class Node {
 	friend class SLL;
 
 private:
-	CSWoman * info_;
+	const CSWoman * const info_;
 	Node* next_;
 
 public:
-	Node();
-	Node(CSWoman* info);
-	Node(CSWoman* info, Node* next);
+//	Node();
+//	Node(CSWoman* info);
+	Node(CSWoman const * const info, Node* next);
 
 	const CSWoman* getInfo() const;
 };
