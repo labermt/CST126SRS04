@@ -71,7 +71,7 @@ std::ostream & operator<<(std::ostream & os, linkedlist const & ll)
 	if (head != nullptr)
 	{
 		os << *head;
-		auto tail{ head->getNext() };
+		// auto tail{ head->getNext() };
 	}
 	
 	return os; 
