@@ -6,6 +6,12 @@
 #include "CSWomen.h"
 #include "linkedlist.h"
 
+#ifndef _NDEBUG
+#	define _CRTDBG_MAP_ALLOC
+#	include <stdlib.h>
+#	include <crtdbg.h>
+#endif
+
 int main()
 {
 	auto const woman1 = new const CSWoman("Ada Lovelace", 1815, "Ada is considered the first computer programmer.");
@@ -19,24 +25,29 @@ int main()
 	auto const woman9 = new const CSWoman("Patricia Selinger", 1949, "Patricia was a key author of IBM System R, and an IBM Fellow.");
 	auto const woman10 = new const CSWoman("Marissa Mayer", 1975, "Marissa was the first female engineer at Google.");
 
-	LinkedList women;
-	women.addToList(woman1);
-	women.addToList(woman2);
-	women.addToList(woman3);
-	women.addToList(woman4);
-	women.addToList(woman5);
-	women.addToList(woman6);
-	women.addToList(woman7);
-	women.addToList(woman8);
-	women.addToList(woman9);
-	women.addToList(woman10);
+	{
+		LinkedList women;
+		women.addToList(woman1);
+		women.addToList(woman2);
+		women.addToList(woman3);
+		women.addToList(woman4);
+		women.addToList(woman5);
+		women.addToList(woman6);
+		women.addToList(woman7);
+		women.addToList(woman8);
+		women.addToList(woman9);
+		women.addToList(woman10);
 
-	std::cout << women;
-	women.reverse();
-	std::cout << "~~~~~~~~~~Here is the list in reverse order~~~~~~~~~~" << std::endl;
-	std::cout << std::endl;
-	std::cout << women << std::endl;
+		std::cout << women;
+		women.reverse();
+		std::cout << "~~~~~~~~~~Here is the list in reverse order~~~~~~~~~~" << std::endl;
+		std::cout << std::endl;
+		std::cout << women << std::endl;
+	}
+
+#ifndef _NDEBUG // Left check in code as a suggestion of a way to leave scaffolding in place. 
+	_CrtDumpMemoryLeaks();
+#endif
 
 	return 0;
 }
-

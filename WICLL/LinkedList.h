@@ -25,7 +25,7 @@ public:
 	};
 
 private:
-	Node* head_ = nullptr;
+	Node * head_{ nullptr };
 
 public:
 	~LinkedList();

@@ -2,7 +2,7 @@
 #include <iostream>
 #include "linkedlist.h"
 
-LinkedList::Node::Node(Node* next,const CSWoman* const data):
+LinkedList::Node::Node(Node* next, const CSWoman* const data):
 	next_{next}, 
 	data_{data}
 {
@@ -56,15 +56,27 @@ void LinkedList::reverse()
 
 std::ostream& operator<<(std::ostream & os, const LinkedList & list)
 {
-	if (list.getHead() != nullptr) os << *list.getHead();
+	if (list.getHead() != nullptr)
+	{
+		os << *list.getHead();
+	}
 
 	return os;
 }
 
 std::ostream& operator<<(std::ostream & os, const LinkedList::Node & node)
 {
-	os << *node.getData();
-	if (node.getNext() != nullptr) os << *node.getNext();
+	auto const csWoman{ node.getData() };
+	if (csWoman != nullptr) // nullptr check. 
+	{
+		os << *csWoman;
+	}
+
+	auto const nextNode{ node.getNext() }; // node.getNext() is invariant. Save a call. 
+	if (nextNode != nullptr)
+	{
+		os << *nextNode;
+	}
 
 	return os;
 }
