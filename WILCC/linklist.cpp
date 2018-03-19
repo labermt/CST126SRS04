@@ -25,7 +25,7 @@ void node::setnext(node* data)
 	next_ = data ;
 }
 
-void list::addfunc(const CSWoman * data)
+void list::addfunc(const CSWoman * const data)
 {
 	auto filler = new node{ data };
 	if (filler != nullptr);
@@ -46,7 +46,7 @@ void list::printlist()
 	}
 }
 
-void list::reverselist()
+void list::reverselist() // Why not using the code from class?
 {
 	node * current{ head_ };
 	node * next{ nullptr };

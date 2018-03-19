@@ -6,7 +6,7 @@ class node
 {
 private:
 	const CSWoman * const myinfo_ ;
-	node * next_{nullptr};
+	node * next_{ nullptr };
 
 public:
 	explicit node(const CSWoman * data);
