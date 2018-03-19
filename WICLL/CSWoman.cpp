@@ -1,13 +1,14 @@
 #include "stdafx.h"
+#include <cassert>
 #include <iostream>
 #include "CSWoman.h"
 
 
-
-CSWoman::CSWoman(const char * const name, const unsigned birthYear, const char * const fact):
-	name_{name}, birthYear_{birthYear},fact_{fact}
+CSWoman::CSWoman(const char * const name, const unsigned birthYear, const char * const fact) :
+	name_{ name ? name : "" }, birthYear_{ birthYear }, fact_{ fact ? fact : "" }
 {
-
+	assert(name);
+	assert(fact);
 }
 
 unsigned CSWoman::get_byear() const
@@ -33,5 +34,3 @@ std::ostream& operator<<(std::ostream&os, const CSWoman& woman)
 	std::cout << woman.get_fact() << "\n\n";
 	return os;
 }
-
-

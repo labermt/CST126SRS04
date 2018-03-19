@@ -11,7 +11,7 @@ public:
 
 	private:
 		node* next_;
-		const CSWoman* data_;
+		const CSWoman* const data_;
 
 	public:
 		const CSWoman* get_data() const;

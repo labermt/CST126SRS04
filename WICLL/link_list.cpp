@@ -3,12 +3,9 @@
 #include "link_list.h"
 
 
-
-
 link_list::~link_list()
 {
 	delete head_;
-
 }
 
 void link_list::reverse()
@@ -31,16 +28,14 @@ void link_list::add(const CSWoman* const cs_woman)
 	head_ = new_node;
 }
 
-
 const link_list::node* link_list::get_head() const
 {
 	return head_;
 }
 
-link_list::node::node(node* next, const CSWoman* const data):
+link_list::node::node(node* const next, const CSWoman* const data):
 	next_{next}, data_{data}
 {
-
 }
 
 const CSWoman* link_list::node::get_data() const
@@ -71,7 +66,11 @@ std::ostream& operator<<(std::ostream&os, const link_list& list)
 
 std::ostream& operator<<(std::ostream& os, const link_list::node& node)
 {
-	os << *node.get_data();
+	const auto woman{ node.get_data() };
+	if (woman!=nullptr)
+	{
+		os << *woman;
+	}
 	auto const tail{ node.get_next() };
 	if (tail != nullptr)
 	{
